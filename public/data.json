@@ -1,0 +1,1192 @@
+{
+  "Andheri": [
+    {
+      "Name": "Luxury 3BHK Apartment in Andheri West",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Swimming Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Tennis Court",
+        "Parking",
+        "24x7 Security"
+      ],
+      "CarpetArea": 1500,
+      "AskingPrice": 40000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic City View",
+        "Luxurious Interiors",
+        "Smart Home Technology"
+      ],
+      "Landmarks": ["Andheri Station", "Infinity Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Elegant 2BHK Flat in Andheri East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Lift", "Security", "Gym", "Parking"],
+      "CarpetArea": 900,
+      "AskingPrice": 20000000,
+      "IsForRent": true,
+      "Furnished": false,
+      "SpecialFeatures": ["Modern Design", "Good Ventilation"],
+      "Landmarks": ["Western Express Highway", "Andheri Metro Station"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.1 km",
+        "DistanceFromSchool": "0.5 km"
+      }
+    },
+    {
+      "Name": "Cozy 1BHK in Andheri West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 1,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Security", "Lift", "Parking"],
+      "CarpetArea": 600,
+      "AskingPrice": 12000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": ["Affordable", "Close to Market"],
+      "Landmarks": ["Lokhandwala Complex", "Versova Beach"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.2 km"
+      }
+    },
+    {
+      "Name": "Spacious 4BHK Penthouse in Andheri East",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Gym",
+        "Swimming Pool",
+        "Clubhouse",
+        "Spa",
+        "Private Terrace"
+      ],
+      "CarpetArea": 2500,
+      "AskingPrice": 55000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Private Pool",
+        "High-Rise View",
+        "Luxurious Interiors"
+      ],
+      "Landmarks": ["Chakala Metro Station", "Mahakali Caves"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.3 km"
+      }
+    },
+    {
+      "Name": "Budget 2BHK in Andheri West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Parking", "Security", "Lift"],
+      "CarpetArea": 850,
+      "AskingPrice": 18000000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Good Connectivity"],
+      "Landmarks": ["Veera Desai Road", "City Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.9 km"
+      }
+    },
+    {
+      "Name": "Modern 3BHK in Andheri East",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Gym",
+        "Clubhouse",
+        "Swimming Pool",
+        "Parking",
+        "24x7 Security"
+      ],
+      "CarpetArea": 1400,
+      "AskingPrice": 32000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Interiors", "Close to Business Hub"],
+      "Landmarks": ["Marol Naka", "SEEPZ"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Stylish Studio Apartment in Andheri West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Open"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 400,
+      "AskingPrice": 10000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": ["Compact", "Close to Amenities"],
+      "Landmarks": ["Juhu Circle", "PVR Cinemas"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.7 km"
+      }
+    },
+    {
+      "Name": "Elegant 2BHK in Andheri East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Parking"],
+      "CarpetArea": 900,
+      "AskingPrice": 22000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "Good Ventilation"],
+      "Landmarks": ["MIDC", "Holy Spirit Hospital"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Luxury 4BHK in Andheri West",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Swimming Pool", "Gym", "Clubhouse", "Spa", "Tennis Court"],
+      "CarpetArea": 2000,
+      "AskingPrice": 50000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic View",
+        "High-End Interiors",
+        "Smart Home Technology"
+      ],
+      "Landmarks": ["Lokhandwala Market", "Versova Metro"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.2 km"
+      }
+    },
+    {
+      "Name": "Cozy 1BHK in Andheri East",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 550,
+      "AskingPrice": 9500000,
+      "IsForRent": true,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Proximity to Market"],
+      "Landmarks": ["Andheri Metro Station", "Holy Family School"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.1 km",
+        "DistanceFromSchool": "0.8 km"
+      }
+    }
+  ],
+  "Jogeshwari": [
+    {
+      "Name": "Affordable 2BHK in Jogeshwari West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Parking", "Lift"],
+      "CarpetArea": 900,
+      "AskingPrice": 18000000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Good Connectivity", "Close to Market"],
+      "Landmarks": ["Jogeshwari Station", "Infinity Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.1 km",
+        "DistanceFromSchool": "0.8 km"
+      }
+    },
+    {
+      "Name": "Luxury 4BHK Penthouse in Jogeshwari East",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Swimming Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Terrace",
+        "Tennis Court",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 2500,
+      "AskingPrice": 55000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic View",
+        "High-End Interiors",
+        "Smart Home Technology"
+      ],
+      "Landmarks": ["Oshiwara Depot", "Oshiwara Garden"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Modern 2BHK Apartment in Jogeshwari West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Security", "Lift"],
+      "CarpetArea": 1000,
+      "AskingPrice": 22000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "City View"],
+      "Landmarks": ["Mumbai Metro", "Western Express Highway"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.9 km"
+      }
+    },
+    {
+      "Name": "Cozy 1BHK in Jogeshwari East",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Security", "Lift"],
+      "CarpetArea": 550,
+      "AskingPrice": 10000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": ["Affordable", "Close to Market"],
+      "Landmarks": ["Western Express Highway", "Patel Nagar"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.1 km",
+        "DistanceFromSchool": "0.7 km"
+      }
+    },
+    {
+      "Name": "Spacious 3BHK in Jogeshwari West",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Swimming Pool", "Parking", "Security"],
+      "CarpetArea": 1400,
+      "AskingPrice": 32000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Spacious Rooms", "City View"],
+      "Landmarks": ["Ram Mandir Road", "Infinity Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Luxury 3BHK Apartment in Jogeshwari East",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Swimming Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Tennis Court",
+        "Parking",
+        "Security"
+      ],
+      "CarpetArea": 1600,
+      "AskingPrice": 40000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic City View",
+        "Luxurious Interiors",
+        "Smart Home Technology"
+      ],
+      "Landmarks": ["Jogeshwari Station", "Western Express Highway"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.2 km"
+      }
+    },
+    {
+      "Name": "Budget 1BHK in Jogeshwari West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 500,
+      "AskingPrice": 8500000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Proximity to Metro"],
+      "Landmarks": ["Metro Junction Mall", "Jogeshwari Caves"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.8 km"
+      }
+    },
+    {
+      "Name": "Stylish 2BHK in Jogeshwari East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Swimming Pool", "Parking", "Security"],
+      "CarpetArea": 950,
+      "AskingPrice": 20000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "Good Connectivity"],
+      "Landmarks": ["Western Express Highway", "Amboli Hill"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Luxury 4BHK Villa in Jogeshwari West",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Private Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Garden",
+        "Tennis Court",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 2800,
+      "AskingPrice": 65000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Private Terrace",
+        "Luxurious Interiors",
+        "Panoramic View"
+      ],
+      "Landmarks": ["Oshiwara Lake", "Jogeshwari Metro Station"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.5 km",
+        "DistanceFromSchool": "1.3 km"
+      }
+    },
+    {
+      "Name": "Modern 3BHK in Jogeshwari East",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Swimming Pool", "Parking", "Security"],
+      "CarpetArea": 1300,
+      "AskingPrice": 30000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Spacious Rooms", "High-End Interiors"],
+      "Landmarks": ["Jogeshwari West Station", "Patel Estate"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    }
+  ],
+  "Borivali": [
+    {
+      "Name": "Elegant 2BHK in Borivali East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Lift", "Security", "Gym", "Parking"],
+      "CarpetArea": 1000,
+      "AskingPrice": 22000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "City View"],
+      "Landmarks": ["Western Express Highway", "Borivali National Park"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Budget 1BHK in Borivali West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Security", "Lift"],
+      "CarpetArea": 600,
+      "AskingPrice": 15000000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Close to Market"],
+      "Landmarks": ["Link Road", "Mandapeshwar Caves"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.8 km"
+      }
+    },
+    {
+      "Name": "Modern 3BHK in Borivali East",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Gym",
+        "Clubhouse",
+        "Swimming Pool",
+        "Parking",
+        "24x7 Security"
+      ],
+      "CarpetArea": 1400,
+      "AskingPrice": 32000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Spacious Rooms", "City View"],
+      "Landmarks": ["Kora Kendra Ground", "Mumbai Metro"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Cozy 1BHK in Borivali West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 550,
+      "AskingPrice": 10000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": ["Affordable", "Close to Market"],
+      "Landmarks": ["Borivali Station", "Nancy Colony"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.1 km",
+        "DistanceFromSchool": "0.7 km"
+      }
+    },
+    {
+      "Name": "Spacious 4BHK Penthouse in Borivali East",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Swimming Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Terrace",
+        "Tennis Court",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 2500,
+      "AskingPrice": 55000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic View",
+        "High-End Interiors",
+        "Smart Home Technology"
+      ],
+      "Landmarks": ["Western Express Highway", "Borivali National Park"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.2 km"
+      }
+    },
+    {
+      "Name": "Budget 2BHK in Borivali West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 900,
+      "AskingPrice": 18000000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Good Connectivity"],
+      "Landmarks": ["Borivali West Station", "Gorai Beach"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.9 km"
+      }
+    },
+    {
+      "Name": "Modern 2BHK Apartment in Borivali East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Security", "Lift"],
+      "CarpetArea": 1000,
+      "AskingPrice": 22000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "City View"],
+      "Landmarks": ["Western Express Highway", "Magathane Depot"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Luxury 4BHK Villa in Borivali West",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Private Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Garden",
+        "Tennis Court",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 2800,
+      "AskingPrice": 65000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Private Terrace",
+        "Luxurious Interiors",
+        "Panoramic View"
+      ],
+      "Landmarks": ["Dattapada Road", "Borivali National Park"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.5 km",
+        "DistanceFromSchool": "1.3 km"
+      }
+    },
+    {
+      "Name": "Stylish 2BHK in Borivali East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Swimming Pool", "Parking", "Security"],
+      "CarpetArea": 950,
+      "AskingPrice": 20000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "Good Connectivity"],
+      "Landmarks": ["Sanjay Gandhi National Park", "Oberoi Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Affordable 1BHK in Borivali West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 500,
+      "AskingPrice": 8500000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Proximity to Market"],
+      "Landmarks": ["Link Road", "Chikuwadi"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.8 km"
+      }
+    }
+  ],
+  "Malad": [
+    {
+      "Name": "Elegant 2BHK in Malad West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Lift", "Security", "Gym", "Parking"],
+      "CarpetArea": 1000,
+      "AskingPrice": 22000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "City View"],
+      "Landmarks": ["Malad Station", "Inorbit Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Budget 1BHK in Malad West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Security", "Lift"],
+      "CarpetArea": 600,
+      "AskingPrice": 15000000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Close to Market"],
+      "Landmarks": ["Link Road", "Infinity IT Park"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.8 km"
+      }
+    },
+    {
+      "Name": "Modern 3BHK in Malad East",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Gym",
+        "Clubhouse",
+        "Swimming Pool",
+        "Parking",
+        "24x7 Security"
+      ],
+      "CarpetArea": 1400,
+      "AskingPrice": 32000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Spacious Rooms", "City View"],
+      "Landmarks": ["Oberoi Mall", "Goregaon Sports Club"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Cozy 1BHK in Malad West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 550,
+      "AskingPrice": 10000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": ["Affordable", "Close to Market"],
+      "Landmarks": ["Malad Station", "Infiniti Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.1 km",
+        "DistanceFromSchool": "0.7 km"
+      }
+    },
+    {
+      "Name": "Spacious 4BHK Penthouse in Malad East",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Swimming Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Terrace",
+        "Tennis Court",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 2500,
+      "AskingPrice": 55000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic View",
+        "High-End Interiors",
+        "Smart Home Technology"
+      ],
+      "Landmarks": ["Western Express Highway", "Malad Subway"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.2 km"
+      }
+    },
+    {
+      "Name": "Budget 2BHK in Malad West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 900,
+      "AskingPrice": 18000000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Good Connectivity"],
+      "Landmarks": ["Malad West Station", "Inorbit Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.9 km"
+      }
+    },
+    {
+      "Name": "Modern 2BHK Apartment in Malad East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Security", "Lift"],
+      "CarpetArea": 1000,
+      "AskingPrice": 22000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "City View"],
+      "Landmarks": ["Western Express Highway", "Times Square Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Luxury 4BHK Villa in Malad West",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Private Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Garden",
+        "Tennis Court",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 2800,
+      "AskingPrice": 65000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Private Terrace",
+        "Luxurious Interiors",
+        "Panoramic View"
+      ],
+      "Landmarks": ["Link Road", "Infiniti IT Park"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.5 km",
+        "DistanceFromSchool": "1.3 km"
+      }
+    },
+    {
+      "Name": "Stylish 2BHK in Malad East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Swimming Pool", "Parking", "Security"],
+      "CarpetArea": 950,
+      "AskingPrice": 20000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "Good Connectivity"],
+      "Landmarks": ["Inorbit Mall", "Oberoi Mall"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Affordable 1BHK in Malad West",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 500,
+      "AskingPrice": 8500000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Proximity to Market"],
+      "Landmarks": ["Malad Station", "Infiniti IT Park"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.8 km"
+      }
+    }
+  ],
+  "Bandra": [
+    {
+      "Name": "Luxurious 3BHK in Bandra West",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Swimming Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Terrace",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 1800,
+      "AskingPrice": 45000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": ["Sea View", "High-End Interiors", "Prime Location"],
+      "Landmarks": ["Carter Road", "Bandra Worli Sea Link"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Modern 2BHK Apartment in Bandra East",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Security", "Lift"],
+      "CarpetArea": 1000,
+      "AskingPrice": 28000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "City View"],
+      "Landmarks": ["Bandra Kurla Complex", "MIG Cricket Club"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Spacious 4BHK Penthouse in Bandra West",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Private Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Garden",
+        "Tennis Court",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 3000,
+      "AskingPrice": 75000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic Sea View",
+        "Luxurious Interiors",
+        "Smart Home Technology"
+      ],
+      "Landmarks": ["Bandra Bandstand", "Lilavati Hospital"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.5 km",
+        "DistanceFromSchool": "1.2 km"
+      }
+    },
+    {
+      "Name": "Budget 1BHK in Bandra East",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 600,
+      "AskingPrice": 20000000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Close to Market"],
+      "Landmarks": ["Bandra Terminus", "Phoenix Marketcity"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.9 km"
+      }
+    },
+    {
+      "Name": "Cozy 2BHK in Bandra West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Security", "Parking"],
+      "CarpetArea": 1100,
+      "AskingPrice": 32000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "Prime Location"],
+      "Landmarks": ["Carter Road", "Mount Mary Church"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.0 km"
+      }
+    },
+    {
+      "Name": "Luxury 3BHK Sea View Apartment in Bandra East",
+      "Features": {
+        "Bedrooms": 3,
+        "Bathrooms": 3,
+        "Balconies": 2,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Swimming Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Terrace",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 2000,
+      "AskingPrice": 55000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic Sea View",
+        "High-End Interiors",
+        "Exclusive Location"
+      ],
+      "Landmarks": ["Bandra Kurla Complex", "Diamond Market"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Modern 2.5BHK in Bandra West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Swimming Pool", "Parking", "Security"],
+      "CarpetArea": 1200,
+      "AskingPrice": 30000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "City View"],
+      "Landmarks": ["Hill Road", "Bandra Fort"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.3 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Affordable 1BHK in Bandra East",
+      "Features": {
+        "Bedrooms": 1,
+        "Bathrooms": 1,
+        "Balconies": 0,
+        "Kitchen": "Standard"
+      },
+      "Amenities": ["Lift", "Security"],
+      "CarpetArea": 550,
+      "AskingPrice": 15000000,
+      "IsForRent": false,
+      "Furnished": false,
+      "SpecialFeatures": ["Affordable", "Proximity to Market"],
+      "Landmarks": ["Bandra Terminus", "Phoenix Marketcity"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.2 km",
+        "DistanceFromSchool": "0.8 km"
+      }
+    },
+    {
+      "Name": "Modern 2BHK Apartment in Bandra West",
+      "Features": {
+        "Bedrooms": 2,
+        "Bathrooms": 2,
+        "Balconies": 1,
+        "Kitchen": "Modular"
+      },
+      "Amenities": ["Gym", "Clubhouse", "Security", "Lift"],
+      "CarpetArea": 1000,
+      "AskingPrice": 28000000,
+      "IsForRent": true,
+      "Furnished": true,
+      "SpecialFeatures": ["Modern Design", "City View"],
+      "Landmarks": ["Bandra Kurla Complex", "MIG Cricket Club"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.4 km",
+        "DistanceFromSchool": "1.1 km"
+      }
+    },
+    {
+      "Name": "Spacious 4BHK Penthouse in Bandra West",
+      "Features": {
+        "Bedrooms": 4,
+        "Bathrooms": 4,
+        "Balconies": 3,
+        "Kitchen": "Modular"
+      },
+      "Amenities": [
+        "Private Pool",
+        "Gym",
+        "Clubhouse",
+        "Spa",
+        "Private Garden",
+        "Tennis Court",
+        "Security",
+        "Parking"
+      ],
+      "CarpetArea": 3000,
+      "AskingPrice": 75000000,
+      "IsForRent": false,
+      "Furnished": true,
+      "SpecialFeatures": [
+        "Panoramic Sea View",
+        "Luxurious Interiors",
+        "Smart Home Technology"
+      ],
+      "Landmarks": ["Bandra Bandstand", "Lilavati Hospital"],
+      "ExactLocation": {
+        "DistanceFromBusStop": "0.5 km",
+        "DistanceFromSchool": "1.2 km"
+      }
+    }
+  ]
+}
