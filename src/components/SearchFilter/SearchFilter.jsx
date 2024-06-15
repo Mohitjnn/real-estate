@@ -55,7 +55,7 @@ const SearchFilter = () => {
             <div className="text-xs md:text-sm text-gray-500 font-bold">
               <select
                 name="propertyType"
-                className="w-full"
+                className="rounded-lg h-fit outline-none w-[100%]"
                 onChange={(e) =>
                   handleSelectChange(propertyTypeRef, e.target.value)
                 }
@@ -73,7 +73,7 @@ const SearchFilter = () => {
             <div className="text-xs lg:text-sm text-gray-500 font-bold">
               <select
                 name="bedrooms"
-                className="w-full"
+                className="rounded-lg h-fit outline-none w-[100%]"
                 onChange={(e) =>
                   handleSelectChange(bedroomsRef, e.target.value)
                 }
@@ -91,7 +91,7 @@ const SearchFilter = () => {
             <div className="text-xs lg:text-sm text-gray-500 font-bold">
               <select
                 name="priceRange"
-                className="w-full"
+                className="rounded-lg h-fit outline-none w-[100%]"
                 onChange={(e) =>
                   handleSelectChange(priceRangeRef, e.target.value)
                 }
