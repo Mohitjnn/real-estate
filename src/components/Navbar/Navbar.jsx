@@ -24,7 +24,7 @@ function Navbar() {
 
   return (
     <div
-      className=" w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit  bg-transparent top-0 text-white fixed 
+      className=" w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 z-30 h-fit  bg-black/20 top-0 text-white fixed 
       "
     >
       <div className="flex xl:justify-evenly items-center w-fit xl:w-fit h-fit py-2">

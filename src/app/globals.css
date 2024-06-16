@@ -57,4 +57,10 @@
     @apply absolute top-6 left-0 w-full h-fit mt-14 bg-black/20 backdrop-blur-lg text-white flex flex-wrap justify-evenly items-center z-50 rounded-b-3xl p-4
   }
 
+  .embla__dot {
+    /* Inherit styles from the default Tailwind button classes */
+    @apply inline-flex h-4 w-4 items-center justify-center rounded-full p-0 mx-2 cursor-pointer bg-gray-300;
+
+  }
+
 }
