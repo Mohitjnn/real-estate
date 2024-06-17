@@ -2,7 +2,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 
-const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "700"] });
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["300", "400", "700"] });
 
 export const metadata = {
   title: "Create Next App",

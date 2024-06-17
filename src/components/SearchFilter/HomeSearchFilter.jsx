@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
 
-const SearchFilter = () => {
+const HomeSearchFilter = () => {
   const [buyOrRent, setBuyOrRent] = useState("buy");
   const propertyTypeRef = useRef("");
   const bedroomsRef = useRef("");
@@ -97,10 +97,10 @@ const SearchFilter = () => {
                 }
               >
                 <option value="">Show All</option>
-                <option value="under-50">Under 50 Lakhs</option>
-                <option value="50-100">50 Lakhs - 1 Crore</option>
-                <option value="1-2">1 - 2 Crores</option>
-                <option value="above-2">Above 2 Crores</option>
+                <option value={["Min", 0.5]}>Under 50 Lakhs</option>
+                <option value={[0.5, 1]}>50 Lakhs - 1 Crore</option>
+                <option value={[1, 2]}>1 - 2 Crores</option>
+                <option value={[2, "Max"]}>Above 2 Crores</option>
               </select>
             </div>
           </div>
@@ -116,4 +116,4 @@ const SearchFilter = () => {
   );
 };
 
-export default SearchFilter;
+export default HomeSearchFilter;

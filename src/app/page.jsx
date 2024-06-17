@@ -1,9 +1,8 @@
 import ImageCarousel from "@/components/Carousel/ImageCarousel";
-import SearchFilter from "@/components/SearchFilter/SearchFilter";
 import TextCarousel from "@/components/Carousel/TextCarousel";
 import Image from "next/image";
 import DataCarousel from "@/components/Carousel/DataCarousel";
-
+import HomeSearchFilter from "@/components/SearchFilter/HomeSearchFilter";
 const images = [
   {
     title: "HomePage Image 1",
@@ -66,7 +65,7 @@ export default function Home() {
             </p>
           </div>
           <div className="absolute left-0 top-[78vh] xl:top-[80vh] flex flex-col items-center justify-center h-fit space-y-0 w-full">
-            <SearchFilter />
+            <HomeSearchFilter />
           </div>
         </section>
         <section className="relative w-full h-fit flex flex-col mt-32 mb-20 px-8 space-y-8">

@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blueLight: "#F3F4F5",
+        blueLight: "#F6FDFF",
         bluePrimary: "#144272",
+        cardHolderLight: "#F3F4F5",
       },
     },
   },
