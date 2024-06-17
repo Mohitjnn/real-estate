@@ -5,8 +5,9 @@ const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
   return (
     <>
       <select
-        name="propertyType"
+        name="location"
         className="rounded-lg text-2xl font-normal w-fit h-fit outline-none bg-transparent text-white mb-4"
+        value={filters.location} // Set the initial value
         onChange={(e) => handleFilterChange("location", e.target.value)}
       >
         <option value="Andheri" style={{ color: "black" }}>
@@ -26,11 +27,12 @@ const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
         </option>
         {/* Add more locations as needed */}
       </select>
-      <div className=" flex flex-col items-center justify-center h-fit space-y-4 py-8 px-8 w-full bg-cardHolderLight rounded-t-3xl">
+      <div className="flex flex-col items-center justify-center h-fit space-y-4 py-8 px-8 w-full bg-cardHolderLight rounded-t-3xl">
         <div className="flex w-full h-fit justify-between">
           <select
             name="isForRent"
             className="text font-semibold rounded-lg h-fit p-3 outline-none w-fit"
+            value={filters.isForRent ? "Rent" : "Buy"} // Set the initial value
             onChange={(e) =>
               handleFilterChange("isForRent", e.target.value === "Rent")
             }
@@ -42,6 +44,7 @@ const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
           <select
             name="minPrice"
             className="text font-semibold rounded-lg h-fit p-3 outline-none w-fit"
+            value={filters.minPrice} // Set the initial value
             onChange={(e) =>
               handleFilterChange("minPrice", parseInt(e.target.value))
             }
@@ -55,6 +58,7 @@ const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
           <select
             name="maxPrice"
             className="text font-semibold rounded-lg h-fit p-3 outline-none w-fit"
+            value={filters.maxPrice} // Set the initial value
             onChange={(e) =>
               handleFilterChange("maxPrice", parseInt(e.target.value))
             }
@@ -74,10 +78,10 @@ const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
               <button
                 key={rooms}
                 type="button"
-                className={`px-4 py-2 rounded-lg text font-semibold bg-transparent hover:bg-blue-300 ${
+                className={`px-4 py-2 rounded-lg text font-semibold ${
                   filters.bedrooms === rooms ? "bg-blue-300" : ""
                 }`}
-                onClick={() => handleFilterChange("bedrooms", parseInt(rooms))}
+                onClick={() => handleFilterChange("bedrooms", rooms)}
               >
                 {rooms === 4 ? "4+" : rooms}
               </button>

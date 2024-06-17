@@ -5,14 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 
-const page = () => {
+const page = (context) => {
+  const { location, bedrooms, minPrice, maxPrice, isForRent } =
+    context.searchParams;
+
   const [data, setData] = useState({});
   const [filters, setFilters] = useState({
-    location: "Andheri",
-    bedrooms: 3,
-    minPrice: 0,
-    maxPrice: Infinity, // Initialize maxPrice to Infinity
-    isForRent: false,
+    location: location ? location : "Andheri",
+    bedrooms: bedrooms ? parseInt(bedrooms) : 1,
+    minPrice: minPrice ? parseInt(minPrice) : 0,
+    maxPrice: maxPrice ? parseInt(maxPrice) : 99999999,
+    isForRent: isForRent === "true", // Convert query string to boolean
   });
 
   const handleFilterChange = (key, value) => {
@@ -72,7 +75,7 @@ const page = () => {
               <h1 className="subHeading text-left w-full">Best Options</h1>
               {filteredData.slice(0, 3).map((item, i) => (
                 <Link
-                  href={`/projects/${i}`}
+                  href={`/projects/${item.Name}`}
                   className="flex h-fit justify-between items-center w-full rounded-xl bg-white p-6"
                   key={i}
                 >
@@ -140,7 +143,7 @@ const page = () => {
               <div className="flex flex-col items-center justify-center h-fit space-y-6 p-8 w-full bg-cardHolderLight rounded-3xl">
                 {filteredData.slice(3).map((item, i) => (
                   <Link
-                    href={`/projects/${i}`}
+                    href={`/projects/${item.Name}`}
                     className="flex h-fit items-center w-full rounded-xl bg-white p-6"
                     key={i}
                   >

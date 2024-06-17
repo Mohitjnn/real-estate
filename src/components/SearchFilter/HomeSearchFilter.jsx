@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useRef } from "react";
+import Link from "next/link";
 
 const HomeSearchFilter = () => {
-  const [buyOrRent, setBuyOrRent] = useState("buy");
-  const propertyTypeRef = useRef("");
+  const [buyOrRent, setBuyOrRent] = useState(false);
+  const locationRef = useRef("");
   const bedroomsRef = useRef("");
   const priceRangeRef = useRef("");
 
@@ -15,14 +16,16 @@ const HomeSearchFilter = () => {
     ref.current = value;
   };
 
-  const handleSearchClick = () => {
-    const filter = {
-      buyOrRent,
-      propertyType: propertyTypeRef.current,
-      bedrooms: bedroomsRef.current,
-      priceRange: priceRangeRef.current,
+  const constructQuery = () => {
+    const [minPrice, maxPrice] = priceRangeRef.current.split(",").map(Number);
+
+    return {
+      location: locationRef.current || "Andheri",
+      bedrooms: bedroomsRef.current || "3",
+      minPrice: minPrice || 0,
+      maxPrice: maxPrice || Infinity,
+      isForRent: buyOrRent,
     };
-    console.log(filter);
   };
 
   return (
@@ -30,17 +33,17 @@ const HomeSearchFilter = () => {
       <div className="w-[40%] lg:w-[20%] h-[10vh] z-20 flex justify-evenly items-center">
         <button
           className={`text content-center font-bold my-4 w-1/2 h-full ${
-            buyOrRent === "buy" ? "bg-bluePrimary text-white" : "bg-white"
+            !buyOrRent ? "bg-bluePrimary text-white" : "bg-white"
           } rounded-tl-xl`}
-          onClick={() => handleButtonClick("buy")}
+          onClick={() => handleButtonClick(false)}
         >
           BUY
         </button>
         <button
           className={`text content-center font-bold w-1/2 h-full ${
-            buyOrRent === "rent" ? "bg-bluePrimary text-white" : "bg-white"
+            buyOrRent ? "bg-bluePrimary text-white" : "bg-white"
           } rounded-tr-xl`}
-          onClick={() => handleButtonClick("rent")}
+          onClick={() => handleButtonClick(true)}
         >
           RENT
         </button>
@@ -51,20 +54,21 @@ const HomeSearchFilter = () => {
       >
         <div className="flex flex-row">
           <div className="flex flex-col items-start justify-center lg:justify-between h-full lg:space-y-0 space-y-2 px-4 border-r-2">
-            <h1 className="text-sm lg:text-lg font-bold">Property Type</h1>
+            <h1 className="text-sm lg:text-lg font-bold">Locations</h1>
             <div className="text-xs md:text-sm text-gray-500 font-bold">
               <select
-                name="propertyType"
+                name="location"
                 className="rounded-lg h-fit outline-none w-[100%]"
                 onChange={(e) =>
-                  handleSelectChange(propertyTypeRef, e.target.value)
+                  handleSelectChange(locationRef, e.target.value)
                 }
               >
                 <option value="">Show All</option>
-                <option value="apartment">Apartment</option>
-                <option value="villa">Villa</option>
-                <option value="studio">Studio</option>
-                <option value="penthouse">Penthouse</option>
+                {["Andheri", "Jogeshwari", "Bandra", "Borivali", "Malad"].map(
+                  (location) => (
+                    <option value={location}>{location}</option>
+                  )
+                )}
               </select>
             </div>
           </div>
@@ -79,10 +83,9 @@ const HomeSearchFilter = () => {
                 }
               >
                 <option value="">Show All</option>
-                <option value="1">1 Bedroom</option>
-                <option value="2">2 Bedrooms</option>
-                <option value="3">3 Bedrooms</option>
-                <option value="4">4+ Bedrooms</option>
+                {["1", "2", "3", "4"].map((rooms) => (
+                  <option value={rooms}>{rooms} Bedroom</option>
+                ))}
               </select>
             </div>
           </div>
@@ -97,19 +100,23 @@ const HomeSearchFilter = () => {
                 }
               >
                 <option value="">Show All</option>
-                <option value={["Min", 0.5]}>Under 50 Lakhs</option>
-                <option value={[0.5, 1]}>50 Lakhs - 1 Crore</option>
-                <option value={[1, 2]}>1 - 2 Crores</option>
-                <option value={[2, "Max"]}>Above 2 Crores</option>
+                <option value="0,5000000">Under 50 Lakhs</option>
+                <option value="5000000,10000000">50 Lakhs - 1 Crore</option>
+                <option value="10000000,20000000">1 - 2 Crores</option>
+                <option value="20000000,99999999">Above 2 Crores</option>
               </select>
             </div>
           </div>
         </div>
-        <button
-          className="BtnPrimary text-white py-4"
-          onClick={handleSearchClick}
-        >
-          Search
+        <button className="BtnPrimary text-white py-4">
+          <Link
+            href={{
+              pathname: "/projects",
+              query: constructQuery(),
+            }}
+          >
+            Search
+          </Link>
         </button>
       </div>
     </>
