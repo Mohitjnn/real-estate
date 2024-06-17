@@ -10,22 +10,13 @@ const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
         value={filters.location} // Set the initial value
         onChange={(e) => handleFilterChange("location", e.target.value)}
       >
-        <option value="Andheri" style={{ color: "black" }}>
-          Andheri
-        </option>
-        <option value="Borivali" style={{ color: "black" }}>
-          Borivali
-        </option>
-        <option value="Jogeshwari" style={{ color: "black" }}>
-          Jogeshwari
-        </option>
-        <option value="Malad" style={{ color: "black" }}>
-          Malad
-        </option>
-        <option value="Bandra" style={{ color: "black" }}>
-          Bandra
-        </option>
-        {/* Add more locations as needed */}
+        {["Andheri", "Borivali", "Jogeshwari", "Malad", "Bandra"].map(
+          (location) => (
+            <option key={location} value={location} style={{ color: "black" }}>
+              {location}
+            </option>
+          )
+        )}
       </select>
       <div className="flex flex-col items-center justify-center h-fit space-y-4 py-8 px-8 w-full bg-cardHolderLight rounded-t-3xl">
         <div className="flex w-full h-fit justify-between">
@@ -64,7 +55,7 @@ const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
             }
             style={{ boxShadow: "0px 0px 10px 0px #cdcbcb" }}
           >
-            <option value="999999999">Max Price: -</option>
+            <option value="99999999">Max Price: -</option>
             <option value="5000000">Max Price: 50L</option>
             <option value="10000000">Max Price: 1CR</option>
             <option value="20000000">Max Price: 2CR</option>

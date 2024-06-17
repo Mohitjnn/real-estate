@@ -1,30 +1,39 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const HomeSearchFilter = () => {
-  const [buyOrRent, setBuyOrRent] = useState(false);
-  const locationRef = useRef("");
-  const bedroomsRef = useRef("");
-  const priceRangeRef = useRef("");
+  const [searchParams, setSearchParams] = useState({
+    location: "",
+    bedrooms: "",
+    priceRange: "0,99999999", // Initial price range
+    buyOrRent: false,
+  });
 
   const handleButtonClick = (value) => {
-    setBuyOrRent(value);
+    setSearchParams((prevState) => ({
+      ...prevState,
+      buyOrRent: value,
+    }));
   };
 
-  const handleSelectChange = (ref, value) => {
-    ref.current = value;
+  const handleSelectChange = (field, value) => {
+    setSearchParams((prevState) => ({
+      ...prevState,
+      [field]: value,
+    }));
   };
 
   const constructQuery = () => {
-    const [minPrice, maxPrice] = priceRangeRef.current.split(",").map(Number);
+    const { priceRange } = searchParams;
+    const [minPrice, maxPrice] = priceRange.split(",").map(Number);
 
     return {
-      location: locationRef.current || "Andheri",
-      bedrooms: bedroomsRef.current || "3",
+      location: searchParams.location || "Andheri",
+      bedrooms: searchParams.bedrooms || "3",
       minPrice: minPrice || 0,
-      maxPrice: maxPrice || Infinity,
-      isForRent: buyOrRent,
+      maxPrice: maxPrice || 99999999,
+      isForRent: searchParams.buyOrRent,
     };
   };
 
@@ -33,7 +42,7 @@ const HomeSearchFilter = () => {
       <div className="w-[40%] lg:w-[20%] h-[10vh] z-20 flex justify-evenly items-center">
         <button
           className={`text content-center font-bold my-4 w-1/2 h-full ${
-            !buyOrRent ? "bg-bluePrimary text-white" : "bg-white"
+            !searchParams.buyOrRent ? "bg-bluePrimary text-white" : "bg-white"
           } rounded-tl-xl`}
           onClick={() => handleButtonClick(false)}
         >
@@ -41,7 +50,7 @@ const HomeSearchFilter = () => {
         </button>
         <button
           className={`text content-center font-bold w-1/2 h-full ${
-            buyOrRent ? "bg-bluePrimary text-white" : "bg-white"
+            searchParams.buyOrRent ? "bg-bluePrimary text-white" : "bg-white"
           } rounded-tr-xl`}
           onClick={() => handleButtonClick(true)}
         >
@@ -59,14 +68,15 @@ const HomeSearchFilter = () => {
               <select
                 name="location"
                 className="rounded-lg h-fit outline-none w-[100%]"
-                onChange={(e) =>
-                  handleSelectChange(locationRef, e.target.value)
-                }
+                value={searchParams.location}
+                onChange={(e) => handleSelectChange("location", e.target.value)}
               >
                 <option value="">Show All</option>
                 {["Andheri", "Jogeshwari", "Bandra", "Borivali", "Malad"].map(
                   (location) => (
-                    <option value={location}>{location}</option>
+                    <option key={location} value={location}>
+                      {location}
+                    </option>
                   )
                 )}
               </select>
@@ -78,13 +88,14 @@ const HomeSearchFilter = () => {
               <select
                 name="bedrooms"
                 className="rounded-lg h-fit outline-none w-[100%]"
-                onChange={(e) =>
-                  handleSelectChange(bedroomsRef, e.target.value)
-                }
+                value={searchParams.bedrooms}
+                onChange={(e) => handleSelectChange("bedrooms", e.target.value)}
               >
                 <option value="">Show All</option>
                 {["1", "2", "3", "4"].map((rooms) => (
-                  <option value={rooms}>{rooms} Bedroom</option>
+                  <option key={rooms} value={rooms}>
+                    {rooms} Bedroom
+                  </option>
                 ))}
               </select>
             </div>
@@ -95,11 +106,12 @@ const HomeSearchFilter = () => {
               <select
                 name="priceRange"
                 className="rounded-lg h-fit outline-none w-[100%]"
+                value={searchParams.priceRange}
                 onChange={(e) =>
-                  handleSelectChange(priceRangeRef, e.target.value)
+                  handleSelectChange("priceRange", e.target.value)
                 }
               >
-                <option value="">Show All</option>
+                <option value="0,99999999">Show All</option>
                 <option value="0,5000000">Under 50 Lakhs</option>
                 <option value="5000000,10000000">50 Lakhs - 1 Crore</option>
                 <option value="10000000,20000000">1 - 2 Crores</option>
@@ -108,16 +120,15 @@ const HomeSearchFilter = () => {
             </div>
           </div>
         </div>
-        <button className="BtnPrimary text-white py-4">
-          <Link
-            href={{
-              pathname: "/projects",
-              query: constructQuery(),
-            }}
-          >
-            Search
-          </Link>
-        </button>
+        <Link
+          href={{
+            pathname: "/projects",
+            query: constructQuery(),
+          }}
+          className="BtnPrimary text-white py-4"
+        >
+          Search
+        </Link>
       </div>
     </>
   );
