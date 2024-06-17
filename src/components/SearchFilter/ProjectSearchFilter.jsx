@@ -1,37 +1,38 @@
 "use client";
-
 import React from "react";
 
-const ProjectSearchFilter = () => {
+const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
   return (
     <>
       <select
         name="propertyType"
-        className="rounded-lg text-2xl font-normal w-fit h-fit outline-none bg-transparent text-white "
+        className="rounded-lg text-2xl font-normal w-fit h-fit outline-none bg-transparent text-white mb-4"
+        onChange={(e) => handleFilterChange("location", e.target.value)}
       >
-        <option value="" style={{ color: "black" }}>
-          Show All
+        <option value="Andheri" style={{ color: "black" }}>
+          Andheri
         </option>
-        <option value="apartment" style={{ color: "black" }}>
-          Apartment
+        <option value="Borivali" style={{ color: "black" }}>
+          Borivali
         </option>
-        <option value="villa" style={{ color: "black" }}>
-          Villa
+        <option value="Jogeshwari" style={{ color: "black" }}>
+          Jogeshwari
         </option>
-        <option value="studio" style={{ color: "black" }}>
-          Studio
+        <option value="Malad" style={{ color: "black" }}>
+          Malad
         </option>
-        <option value="penthouse" style={{ color: "black" }}>
-          Penthouse
+        <option value="Bandra" style={{ color: "black" }}>
+          Bandra
         </option>
+        {/* Add more locations as needed */}
       </select>
-      <div className="top-[30vh] flex flex-col items-center justify-center h-fit space-y-4 p-4 w-full bg-cardHolderLight rounded-3xl">
-        <div className="flex w-full h-fit justify-between p-4 space-x-4 ">
+      <div className=" flex flex-col items-center justify-center h-fit space-y-4 py-8 px-8 w-full bg-cardHolderLight rounded-t-3xl">
+        <div className="flex w-full h-fit justify-between">
           <select
-            name="propertyType"
+            name="isForRent"
             className="text font-semibold rounded-lg h-fit p-3 outline-none w-fit"
             onChange={(e) =>
-              handleSelectChange(propertyTypeRef, e.target.value)
+              handleFilterChange("isForRent", e.target.value === "Rent")
             }
             style={{ boxShadow: "0px 0px 10px 0px #cdcbcb" }}
           >
@@ -39,67 +40,50 @@ const ProjectSearchFilter = () => {
             <option value="Rent">Rent</option>
           </select>
           <select
-            name="min Price"
+            name="minPrice"
             className="text font-semibold rounded-lg h-fit p-3 outline-none w-fit"
             onChange={(e) =>
-              handleSelectChange(propertyTypeRef, e.target.value)
+              handleFilterChange("minPrice", parseInt(e.target.value))
             }
             style={{ boxShadow: "0px 0px 10px 0px #cdcbcb" }}
           >
-            <option value="Min">Min Price: 0</option>
-            <option value="0.5">Min Price: 50L</option>
-            <option value="1">Min Price: 1CR</option>
-            <option value="2">Min Price: 2CR</option>
+            <option value="0">Min Price: 0</option>
+            <option value="5000000">Min Price: 50L</option>
+            <option value="10000000">Min Price: 1CR</option>
+            <option value="20000000">Min Price: 2CR</option>
           </select>
           <select
-            name="max Price"
+            name="maxPrice"
             className="text font-semibold rounded-lg h-fit p-3 outline-none w-fit"
             onChange={(e) =>
-              handleSelectChange(propertyTypeRef, e.target.value)
+              handleFilterChange("maxPrice", parseInt(e.target.value))
             }
             style={{ boxShadow: "0px 0px 10px 0px #cdcbcb" }}
           >
-            <option value="Max">Max Price: -</option>
-            <option value="0.5">Max Price: 50L</option>
-            <option value="1">Max Price: 1CR</option>
-            <option value="2">Min Price: 2CR</option>
+            <option value="999999999">Max Price: -</option>
+            <option value="5000000">Max Price: 50L</option>
+            <option value="10000000">Max Price: 1CR</option>
+            <option value="20000000">Max Price: 2CR</option>
           </select>
           <div
-            className="flex items-center space-x-2 w-fit  px-4 rounded-xl bg-white"
+            className="flex items-center space-x-2 w-fit px-4 rounded-xl bg-white"
             style={{ boxShadow: "0px 0px 10px 0px #cdcbcb " }}
           >
             <span className="text font-semibold">Rooms:</span>
-            <button
-              type="button"
-              className="px-4 py-2 rounded-lg text font-semibold bg-transparent  hover:bg-blue-300" // Button styles with hover effect
-              onClick={() => handleRoomsSelection(1)} // Implement functionality for room selection
-            >
-              1
-            </button>
-            <button
-              type="button"
-              className="px-4 py-2 rounded-lg text font-semibold bg-transparent  hover:bg-blue-300"
-              onClick={() => handleRoomsSelection(2)}
-            >
-              2
-            </button>
-            <button
-              type="button"
-              className="px-4 py-2 rounded-lg text font-semibold bg-transparent  hover:bg-blue-300"
-              onClick={() => handleRoomsSelection(3)}
-            >
-              3
-            </button>
-            <button
-              type="button"
-              className="px-4 py-2 rounded-lg text font-semibold bg-transparent  hover:bg-blue-300"
-              onClick={() => handleRoomsSelection(4)}
-            >
-              4+
-            </button>
+            {[1, 2, 3, 4].map((rooms) => (
+              <button
+                key={rooms}
+                type="button"
+                className={`px-4 py-2 rounded-lg text font-semibold bg-transparent hover:bg-blue-300 ${
+                  filters.bedrooms === rooms ? "bg-blue-300" : ""
+                }`}
+                onClick={() => handleFilterChange("bedrooms", parseInt(rooms))}
+              >
+                {rooms === 4 ? "4+" : rooms}
+              </button>
+            ))}
           </div>
         </div>
-        <h1 className=" Heading  text-left w-full px-4">Best Options</h1>
       </div>
     </>
   );
