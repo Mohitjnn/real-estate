@@ -1,10 +1,8 @@
-// functions/Filter.js
-import { useState, useEffect } from "react";
-import axios from "axios";
-import React from "react";
+import { useState, useEffect, useMemo } from "react";
+import getData from "@/fetchHook/datafetch";
 
 export const useFilteredData = (initialFilters) => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({ Properties: [] });
   const [filters, setFilters] = useState(initialFilters);
 
   const handleFilterChange = (key, value) => {
@@ -17,8 +15,8 @@ export const useFilteredData = (initialFilters) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/data.json");
-        setData(response.data);
+        const response = await getData();
+        setData(response.Properties);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -26,15 +24,14 @@ export const useFilteredData = (initialFilters) => {
     fetchData();
   }, []);
 
-  const filteredData = React.useMemo(() => {
-    if (data.Properties) {
-      return data.Properties?.filter((item) => {
+  const filteredData = useMemo(() => {
+    if (data && data.length > 0) {
+      return data.filter((item) => {
         const location = item.Location || "Andheri";
         const price = item.AskingPrice || 0;
         const isRent = item.IsForRent || false;
         const beds = item.Features?.Bedrooms || 0;
 
-        // Apply filters based on current filter values
         const priceInRange =
           filters.maxPrice === Infinity || price <= filters.maxPrice;
 
