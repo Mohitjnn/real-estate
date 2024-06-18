@@ -19,7 +19,7 @@ const DataCarousel = ({ Reasons = [] }) => {
   }, [emblaApi]);
 
   return (
-    <div className="   w-full h-full ">
+    <div className="w-full h-full ">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {Reasons.map((Reason, index) => (

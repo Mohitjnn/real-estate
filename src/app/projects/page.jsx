@@ -13,7 +13,7 @@ const page = (context) => {
     bedrooms: bedrooms ? parseInt(bedrooms) : 1,
     minPrice: minPrice ? parseInt(minPrice) : 0,
     maxPrice: maxPrice ? parseInt(maxPrice) : 99999999,
-    isForRent: isForRent === "true", // Convert query string to boolean
+    isForRent: isForRent, // Convert query string to boolean
   };
 
   const { filters, setFilters, handleFilterChange, filteredData } =
@@ -33,7 +33,9 @@ const page = (context) => {
               <h1 className="subHeading text-left w-full">Best Options</h1>
               {filteredData.slice(0, 3).map((item, i) => (
                 <Link
-                  href={`/projects/${item.Name}`}
+                  href={{
+                    pathname: `/projects/${item.Name}`,
+                  }}
                   className="flex h-fit justify-between items-center w-full rounded-xl bg-white p-6"
                   key={i}
                 >

@@ -27,9 +27,9 @@ export const useFilteredData = (initialFilters) => {
   }, []);
 
   const filteredData = React.useMemo(() => {
-    if (data && Object.keys(data).length > 0) {
-      const locationData = data[filters.location] || [];
-      return locationData.filter((item) => {
+    if (data.Properties) {
+      return data.Properties?.filter((item) => {
+        const location = item.Location || "Andheri";
         const price = item.AskingPrice || 0;
         const isRent = item.IsForRent || false;
         const beds = item.Features?.Bedrooms || 0;
@@ -39,6 +39,7 @@ export const useFilteredData = (initialFilters) => {
           filters.maxPrice === Infinity || price <= filters.maxPrice;
 
         return (
+          location === filters.location &&
           beds === filters.bedrooms &&
           price >= filters.minPrice &&
           priceInRange &&

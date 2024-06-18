@@ -1,7 +1,8 @@
 {
-  "Andheri": [
+  "Properties": [
     {
       "Name": "Luxury 3BHK Apartment in Andheri West",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -34,6 +35,7 @@
     },
     {
       "Name": "Elegant 2BHK Flat in Andheri East",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -54,6 +56,7 @@
     },
     {
       "Name": "Cozy 1BHK in Andheri West",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -74,6 +77,7 @@
     },
     {
       "Name": "Spacious 4BHK Penthouse in Andheri East",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -104,6 +108,7 @@
     },
     {
       "Name": "Budget 2BHK in Andheri West",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -124,6 +129,7 @@
     },
     {
       "Name": "Modern 3BHK in Andheri East",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -150,6 +156,7 @@
     },
     {
       "Name": "Stylish Studio Apartment in Andheri West",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -170,6 +177,7 @@
     },
     {
       "Name": "Elegant 2BHK in Andheri East",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -190,6 +198,7 @@
     },
     {
       "Name": "Luxury 4BHK in Andheri West",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -214,6 +223,7 @@
     },
     {
       "Name": "Cozy 1BHK in Andheri East",
+      "Location": "Andheri",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -231,11 +241,10 @@
         "DistanceFromBusStop": "0.1 km",
         "DistanceFromSchool": "0.8 km"
       }
-    }
-  ],
-  "Jogeshwari": [
+    },
     {
       "Name": "Affordable 2BHK in Jogeshwari West",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -256,6 +265,7 @@
     },
     {
       "Name": "Luxury 4BHK Penthouse in Jogeshwari East",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -289,6 +299,7 @@
     },
     {
       "Name": "Modern 2BHK Apartment in Jogeshwari West",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -309,6 +320,7 @@
     },
     {
       "Name": "Cozy 1BHK in Jogeshwari East",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -329,6 +341,7 @@
     },
     {
       "Name": "Spacious 3BHK in Jogeshwari West",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -349,6 +362,7 @@
     },
     {
       "Name": "Luxury 3BHK Apartment in Jogeshwari East",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -381,6 +395,7 @@
     },
     {
       "Name": "Budget 1BHK in Jogeshwari West",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -401,6 +416,7 @@
     },
     {
       "Name": "Stylish 2BHK in Jogeshwari East",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -421,6 +437,7 @@
     },
     {
       "Name": "Luxury 4BHK Villa in Jogeshwari West",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -454,6 +471,7 @@
     },
     {
       "Name": "Modern 3BHK in Jogeshwari East",
+      "Location": "Jogeshwari",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -471,11 +489,10 @@
         "DistanceFromBusStop": "0.4 km",
         "DistanceFromSchool": "1.0 km"
       }
-    }
-  ],
-  "Borivali": [
+    },
     {
       "Name": "Elegant 2BHK in Borivali East",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -496,6 +513,7 @@
     },
     {
       "Name": "Budget 1BHK in Borivali West",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -516,6 +534,7 @@
     },
     {
       "Name": "Modern 3BHK in Borivali East",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -542,6 +561,7 @@
     },
     {
       "Name": "Cozy 1BHK in Borivali West",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -562,6 +582,7 @@
     },
     {
       "Name": "Spacious 4BHK Penthouse in Borivali East",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -595,6 +616,7 @@
     },
     {
       "Name": "Budget 2BHK in Borivali West",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -615,6 +637,7 @@
     },
     {
       "Name": "Modern 2BHK Apartment in Borivali East",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -635,6 +658,7 @@
     },
     {
       "Name": "Luxury 4BHK Villa in Borivali West",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -668,6 +692,7 @@
     },
     {
       "Name": "Stylish 2BHK in Borivali East",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -688,6 +713,7 @@
     },
     {
       "Name": "Affordable 1BHK in Borivali West",
+      "Location": "Borivali",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -705,11 +731,10 @@
         "DistanceFromBusStop": "0.2 km",
         "DistanceFromSchool": "0.8 km"
       }
-    }
-  ],
-  "Malad": [
+    },
     {
       "Name": "Elegant 2BHK in Malad West",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -730,6 +755,7 @@
     },
     {
       "Name": "Budget 1BHK in Malad West",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -750,6 +776,7 @@
     },
     {
       "Name": "Modern 3BHK in Malad East",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -776,6 +803,7 @@
     },
     {
       "Name": "Cozy 1BHK in Malad West",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -796,6 +824,7 @@
     },
     {
       "Name": "Spacious 4BHK Penthouse in Malad East",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -829,6 +858,7 @@
     },
     {
       "Name": "Budget 2BHK in Malad West",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -849,6 +879,7 @@
     },
     {
       "Name": "Modern 2BHK Apartment in Malad East",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -869,6 +900,7 @@
     },
     {
       "Name": "Luxury 4BHK Villa in Malad West",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -902,6 +934,7 @@
     },
     {
       "Name": "Stylish 2BHK in Malad East",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -922,6 +955,7 @@
     },
     {
       "Name": "Affordable 1BHK in Malad West",
+      "Location": "Malad",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -939,11 +973,10 @@
         "DistanceFromBusStop": "0.2 km",
         "DistanceFromSchool": "0.8 km"
       }
-    }
-  ],
-  "Bandra": [
+    },
     {
       "Name": "Luxurious 3BHK in Bandra West",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -972,6 +1005,7 @@
     },
     {
       "Name": "Modern 2BHK Apartment in Bandra East",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -992,6 +1026,7 @@
     },
     {
       "Name": "Spacious 4BHK Penthouse in Bandra West",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
@@ -1025,6 +1060,7 @@
     },
     {
       "Name": "Budget 1BHK in Bandra East",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -1045,6 +1081,7 @@
     },
     {
       "Name": "Cozy 2BHK in Bandra West",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -1065,6 +1102,7 @@
     },
     {
       "Name": "Luxury 3BHK Sea View Apartment in Bandra East",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 3,
         "Bathrooms": 3,
@@ -1097,6 +1135,7 @@
     },
     {
       "Name": "Modern 2.5BHK in Bandra West",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -1117,6 +1156,7 @@
     },
     {
       "Name": "Affordable 1BHK in Bandra East",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 1,
         "Bathrooms": 1,
@@ -1137,6 +1177,7 @@
     },
     {
       "Name": "Modern 2BHK Apartment in Bandra West",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 2,
         "Bathrooms": 2,
@@ -1157,6 +1198,7 @@
     },
     {
       "Name": "Spacious 4BHK Penthouse in Bandra West",
+      "Location": "Bandra",
       "Features": {
         "Bedrooms": 4,
         "Bathrooms": 4,
