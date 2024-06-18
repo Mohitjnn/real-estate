@@ -68,6 +68,46 @@ const Page = (context) => {
                     </Link>
                   ))}
                 </div>
+                <div className="relative w-full py-4">
+                  <div className="w-full flex justify-between items-start">
+                    <h1 className="subHeading">New Buildings</h1>
+                    <Link
+                      href="/upcomingprojects"
+                      className="text-2xl font-semibold text-blue-600"
+                    >
+                      View All &gt;
+                    </Link>
+                  </div>
+                  <div className="flex items-center justify-between h-fit space-x-6 py-6 w-full rounded-b-3xl">
+                    {[...Array(4)].slice(0, 3).map((item, i) => (
+                      <div
+                        className="flex flex-col h-fit items-center w-[25vw] rounded-xl bg-cardHolderLight"
+                        key={i}
+                      >
+                        <div className="w-full h-[40vh] relative">
+                          <Image
+                            src="/static/images/homePage4.png"
+                            fill={true}
+                            alt="images"
+                            className="object-cover rounded-xl"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h2 className="text-xl text-center w-full font-bold mt-4">
+                            Card{i}
+                          </h2>
+                          <p className="text-m text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nemo sint obcaecati dolorem voluptates
+                            quibusdam aspernatur, facilis quo provident aliquam
+                            pariatur reprehenderit omnis molestiae ipsum et
+                            voluptatem possimus, eius cupiditate ipsa.
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 {filteredData.length > 3 && (
                   <div className="flex flex-col items-center justify-center h-fit space-y-6 p-8 w-full bg-cardHolderLight rounded-3xl">
                     {filteredData.slice(3).map((item, i) => (

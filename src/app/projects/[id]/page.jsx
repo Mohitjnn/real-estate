@@ -1,6 +1,7 @@
 import getData from "@/fetchHook/datafetch";
 import React from "react";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
+import Link from "next/link";
 
 const Plotdetails = async ({ params }) => {
   const Name = decodeURIComponent(params.id);
@@ -33,14 +34,14 @@ const Plotdetails = async ({ params }) => {
   return (
     <main>
       <center className="w-full h-fit">
-        <section className=" flex flex-col items-center mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl">
+        <section className=" flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl ">
           <div className="flex flex-col text-left w-full">
             <h1 className="text-4xl font-medium">
               {formatter.format(AskingPrice)}
             </h1>
             <p className="text text-gray-500">Near {Landmarks.join(", ")}</p>
           </div>
-          <div className="w-full flex justify-between space-x-6 h-fit">
+          <div className="w-full flex justify-between space-x-6 h-fit border-b-2 border-gray-500">
             <ImageGallery />
             <div className="flex flex-col w-[50%] h-fit">
               <div className="w-full bg-gray-300 h-fit flex justify-start items-center rounded-xl py-10 px-4">
@@ -113,6 +114,12 @@ const Plotdetails = async ({ params }) => {
               </div>
             </div>
           </div>
+          <Link
+            href="/contact"
+            className=" bg-bluePrimary rounded-[30px] w-full md:w-fit  py-2 md:py-3 h-fit text-xl px-6 text-white"
+          >
+            Contact Owner
+          </Link>
         </section>
       </center>
     </main>
