@@ -2,6 +2,7 @@ import getData from "@/fetchHook/datafetch";
 import React from "react";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import Link from "next/link";
+import ShowMoreShowLess from "@/components/cards/PersonalStats";
 
 const Plotdetails = async ({ params }) => {
   const Name = decodeURIComponent(params.id);
@@ -30,6 +31,23 @@ const Plotdetails = async ({ params }) => {
     SpecialFeatures,
     ExactLocation: { DistanceFromBusStop, DistanceFromSchool },
   } = propertyData;
+
+  const data = [
+    { id: "1", title: "Price", data: formatter.format(AskingPrice) },
+    { id: "2", title: "Carpet Area", data: `${CarpetArea} sq.Ft` },
+    { id: "3", title: "Address", data: Landmarks.join(", ") },
+    { id: "4", title: "Bedrooms", data: Bedrooms },
+    { id: "5", title: "Bathrooms", data: Bathrooms },
+    { id: "6", title: "Balconies", data: Balconies },
+    { id: "7", title: "Rent or Buy", data: IsForRent ? "Rent" : "Buy" },
+    {
+      id: "8",
+      title: "Furnished",
+      data: Furnished ? "Furnished" : "Unfurnished",
+    },
+    { id: "9", title: "Distance from Bus-stop", data: DistanceFromBusStop },
+    { id: "10", title: "Distance from School", data: DistanceFromSchool },
+  ];
 
   return (
     <main>
@@ -120,6 +138,36 @@ const Plotdetails = async ({ params }) => {
           >
             Contact Owner
           </Link>
+        </section>
+        <section className=" flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl ">
+          <h1 className="w-full subHeading font-medium  text-left">
+            More Details
+          </h1>
+          <ShowMoreShowLess items={data} />
+        </section>
+        <section className=" flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl ">
+          <h1 className="w-full subHeading font-medium  text-left">
+            Amenities
+          </h1>
+          <div className=" flex flex-col space-y-4">
+            {Amenities.map((Amenity, index) => (
+              <p
+                className="text font-semibold text-left w-full"
+                key={index}
+              >{`• ${Amenity}`}</p>
+            ))}
+          </div>
+        </section>
+        <section className=" flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl ">
+          <h1 className="w-full subHeading font-medium  text-left">
+            Special Features
+          </h1>
+          {SpecialFeatures.map((Amenity, index) => (
+            <p
+              className="text font-semibold text-left w-full"
+              key={index}
+            >{`• ${Amenity}`}</p>
+          ))}
         </section>
       </center>
     </main>

@@ -12,7 +12,8 @@ const ImageGallery = () => {
       <div className=" w-full h-[45vh] relative">
         <Image
           src={selectedImage}
-          fill
+          fill={true}
+          priority={true}
           alt="image1"
           className="object-cover rounded-t-xl"
         />
@@ -28,7 +29,7 @@ const ImageGallery = () => {
           >
             <Image
               src={`/static/images/homePage${i + 1}.png`}
-              fill
+              fill={true}
               alt={`image${i + 1}`}
               className="object-cover"
             />
