@@ -1,6 +1,11 @@
-async function getData() {
-  // const response = await fetch(`http://localhost:3000/data.json`);
-  const response = await fetch("http://localhost:3000/data.json");
+async function getData(propertyData) {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(propertyData),
+  });
 
   return response.json();
 }

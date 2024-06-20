@@ -15,6 +15,7 @@ const Page = (context) => {
     minPrice: minPrice ? parseInt(minPrice) : 0,
     maxPrice: maxPrice ? parseInt(maxPrice) : 99999999,
     isForRent: isForRent === "true",
+    type: "multifetch",
   };
 
   const { filters, setFilters, handleFilterChange, filteredData } =

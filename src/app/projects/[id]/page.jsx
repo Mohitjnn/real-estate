@@ -2,15 +2,16 @@ import getData from "@/fetchHook/datafetch";
 import React from "react";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import Link from "next/link";
+import Image from "next/image";
 import ShowMoreShowLess from "@/components/cards/PersonalStats";
 
 const Plotdetails = async ({ params }) => {
   const Name = decodeURIComponent(params.id);
-  const products = await getData();
-
-  const propertyData = products.Properties.find((property) => {
-    return Name === property.Name;
-  });
+  const singlepropertyData = {
+    Name,
+    type: "singleFetch",
+  };
+  const propertyData = await getData(singlepropertyData);
 
   if (!propertyData)
     return <div className="Title w-full text-center py-4">Loading...</div>;
@@ -22,6 +23,7 @@ const Plotdetails = async ({ params }) => {
 
   const {
     AskingPrice,
+    Location,
     Landmarks,
     Features: { Bedrooms, Bathrooms, Balconies, Kitchen },
     Amenities,
@@ -31,6 +33,16 @@ const Plotdetails = async ({ params }) => {
     SpecialFeatures,
     ExactLocation: { DistanceFromBusStop, DistanceFromSchool },
   } = propertyData;
+
+  const similarProperty = {
+    type: "similarFetch",
+    Name,
+    Location,
+    AskingPrice,
+    CarpetArea,
+  };
+
+  const similarProperties = await getData(similarProperty);
 
   const data = [
     { id: "1", title: "Price", data: formatter.format(AskingPrice) },
@@ -49,17 +61,31 @@ const Plotdetails = async ({ params }) => {
     { id: "10", title: "Distance from School", data: DistanceFromSchool },
   ];
 
+  const renderInfoBlocks = (items) =>
+    items.map(({ label, value }) => (
+      <div key={label} className="flex flex-col w-1/3 h-fit text-left">
+        <h1 className="text font-normal">{label}</h1>
+        <h1 className="text font-bold">{value}</h1>
+      </div>
+    ));
+
+  const infoItems = [
+    { label: "Carpet Area", value: `${CarpetArea} sq.ft` },
+    { label: "Furnished", value: Furnished ? "Furnished" : "Unfurnished" },
+    { label: "Rent/Sale", value: IsForRent ? "For Rent" : "For Sale" },
+  ];
+
   return (
     <main>
       <center className="w-full h-fit">
-        <section className=" flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl ">
+        <section className="flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[90%] bg-cardHolderLight rounded-3xl">
           <div className="flex flex-col text-left w-full">
             <h1 className="text-4xl font-medium">
               {formatter.format(AskingPrice)}
             </h1>
             <p className="text text-gray-500">Near {Landmarks.join(", ")}</p>
           </div>
-          <div className="w-full flex justify-between space-x-6 h-fit border-b-2 border-gray-500">
+          <div className="w-full flex justify-between space-x-6 h-fit pb-12 border-b-2 border-gray-500">
             <ImageGallery />
             <div className="flex flex-col w-[50%] h-fit">
               <div className="w-full bg-gray-300 h-fit flex justify-start items-center rounded-xl py-10 px-4">
@@ -81,92 +107,67 @@ const Plotdetails = async ({ params }) => {
                 ))}
               </div>
               <div className="flex flex-wrap justify-between py-12 px-2 w-full h-full gap-y-10">
-                <div className="flex flex-col w-1/3 h-fit text-left">
-                  <h1 className="text font-normal">Carpet Area</h1>
-                  <h1 className="text font-bold">{CarpetArea} sq.ft</h1>
-                </div>
-                <div className="flex flex-col w-1/3 h-fit text-left">
-                  <h1 className="text font-normal">Furnished</h1>
-                  <h1 className="text font-bold">{`${
-                    Furnished ? "Furnished" : "Unfurnished"
-                  }`}</h1>
-                </div>
-                <div className="flex flex-col 1/3 h-fit text-left">
-                  <h1 className="text font-normal">Rent/Sale</h1>
-                  <h1 className="text font-bold">
-                    {IsForRent ? "For Rent" : "For Sale"}
-                  </h1>
-                </div>
-                <div className="flex flex-col w-1/3 h-fit text-left">
-                  <h1 className="text font-normal">Carpet Area</h1>
-                  <h1 className="text font-bold">{CarpetArea} sq.ft</h1>
-                </div>
-                <div className="flex flex-col w-1/3 h-fit text-left">
-                  <h1 className="text font-normal">Furnished</h1>
-                  <h1 className="text font-bold">{`${
-                    Furnished ? "Furnished" : "Unfurnished"
-                  }`}</h1>
-                </div>
-                <div className="flex flex-col 1/3 h-fit text-left">
-                  <h1 className="text font-normal">Rent/Sale</h1>
-                  <h1 className="text font-bold">
-                    {IsForRent ? "For Rent" : "For Sale"}
-                  </h1>
-                </div>
-                <div className="flex flex-col w-1/3 h-fit text-left">
-                  <h1 className="text font-normal">Carpet Area</h1>
-                  <h1 className="text font-bold">{CarpetArea} sq.ft</h1>
-                </div>
-                <div className="flex flex-col w-1/3 h-fit text-left">
-                  <h1 className="text font-normal">Furnished</h1>
-                  <h1 className="text font-bold">{`${
-                    Furnished ? "Furnished" : "Unfurnished"
-                  }`}</h1>
-                </div>
-                <div className="flex flex-col 1/3 h-fit text-left">
-                  <h1 className="text font-normal">Rent/Sale</h1>
-                  <h1 className="text font-bold">
-                    {IsForRent ? "For Rent" : "For Sale"}
-                  </h1>
-                </div>
+                {renderInfoBlocks(infoItems)}
               </div>
             </div>
           </div>
           <Link
             href="/contact"
-            className=" bg-bluePrimary rounded-[30px] w-full md:w-fit  py-2 md:py-3 h-fit text-xl px-6 text-white"
+            className="bg-bluePrimary rounded-[30px] w-full md:w-fit py-2 md:py-3 h-fit text-xl px-6 text-white"
           >
             Contact Owner
           </Link>
         </section>
-        <section className=" flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl ">
-          <h1 className="w-full subHeading font-medium  text-left">
+        <section className="flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[90%] bg-cardHolderLight rounded-3xl">
+          <h1 className="w-full subHeading font-medium text-left">
             More Details
           </h1>
           <ShowMoreShowLess items={data} />
         </section>
-        <section className=" flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl ">
-          <h1 className="w-full subHeading font-medium  text-left">
-            Amenities
-          </h1>
-          <div className=" flex flex-col space-y-4">
+        <section className="flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[90%] bg-cardHolderLight rounded-3xl">
+          <h1 className="w-full subHeading font-medium text-left">Amenities</h1>
+          <div className="flex flex-col space-y-4">
             {Amenities.map((Amenity, index) => (
-              <p
-                className="text font-semibold text-left w-full"
-                key={index}
-              >{`• ${Amenity}`}</p>
+              <p className="text font-semibold text-left w-full" key={index}>
+                • {Amenity}
+              </p>
             ))}
           </div>
         </section>
-        <section className=" flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[80%] bg-cardHolderLight rounded-3xl ">
-          <h1 className="w-full subHeading font-medium  text-left">
+        <section className="flex flex-col items-start mt-6 justify-center h-fit space-y-6 p-8 w-[90%] bg-cardHolderLight rounded-3xl">
+          <h1 className="w-full subHeading font-medium text-left">
             Special Features
           </h1>
           {SpecialFeatures.map((Amenity, index) => (
-            <p
-              className="text font-semibold text-left w-full"
-              key={index}
-            >{`• ${Amenity}`}</p>
+            <p className="text font-semibold text-left w-full" key={index}>
+              • {Amenity}
+            </p>
+          ))}
+        </section>
+        <section className="flex items-center justify-between h-fit space-x-6 py-6 w-[90%] rounded-b-3xl">
+          {similarProperties.map((item, i) => (
+            <Link
+              className="flex flex-col h-fit items-center w-[25vw] rounded-xl bg-cardHolderLight"
+              href={`/projects/${item.Name}`}
+              key={i}
+            >
+              <div className="w-full h-[40vh] relative">
+                <Image
+                  src="/static/images/homePage4.png"
+                  fill={true}
+                  alt="images"
+                  className="object-cover rounded-xl"
+                />
+              </div>
+              <div className="p-4">
+                <h1 className="text-xl text-center w-full font-bold mt-4">
+                  {formatter.format(item.AskingPrice)}
+                </h1>
+                <h1 className="text-lg text-center text-gray-500 w-full font-semibold mt-4">
+                  {item.Landmarks.join(", ")}
+                </h1>
+              </div>
+            </Link>
           ))}
         </section>
       </center>

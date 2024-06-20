@@ -1,8 +1,8 @@
-import { useState, useEffect, useMemo } from "react";
 import getData from "@/fetchHook/datafetch";
+import { useState, useEffect, useMemo } from "react";
 
 export const useFilteredData = (initialFilters) => {
-  const [data, setData] = useState({ Properties: [] });
+  const [data, setData] = useState([]);
   const [filters, setFilters] = useState(initialFilters);
 
   const handleFilterChange = (key, value) => {
@@ -15,37 +15,19 @@ export const useFilteredData = (initialFilters) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await getData();
-        setData(response.Properties);
+        console.log("Fetching data with filters:", filters); // Debugging statement
+        const result = await getData(filters);
+        setData(result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
     fetchData();
-  }, []);
+  }, [filters]);
 
   const filteredData = useMemo(() => {
-    if (data && data.length > 0) {
-      return data.filter((item) => {
-        const location = item.Location || "Andheri";
-        const price = item.AskingPrice || 0;
-        const isRent = item.IsForRent || false;
-        const beds = item.Features?.Bedrooms || 0;
-
-        const priceInRange =
-          filters.maxPrice === Infinity || price <= filters.maxPrice;
-
-        return (
-          location === filters.location &&
-          beds === filters.bedrooms &&
-          price >= filters.minPrice &&
-          priceInRange &&
-          isRent === filters.isForRent
-        );
-      });
-    }
-    return [];
-  }, [data, filters]);
+    return data;
+  }, [data]);
 
   return {
     data,
