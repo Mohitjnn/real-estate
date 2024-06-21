@@ -32,6 +32,7 @@ const Plotdetails = async ({ params }) => {
     Furnished,
     SpecialFeatures,
     ExactLocation: { DistanceFromBusStop, DistanceFromSchool },
+    images,
   } = propertyData;
 
   const similarProperty = {
@@ -86,7 +87,7 @@ const Plotdetails = async ({ params }) => {
             <p className="text text-gray-500">Near {Landmarks.join(", ")}</p>
           </div>
           <div className="w-full flex justify-between space-x-6 h-fit pb-12 border-b-2 border-gray-500">
-            <ImageGallery />
+            <ImageGallery images={images} />
             <div className="flex flex-col w-[50%] h-fit">
               <div className="w-full bg-gray-300 h-fit flex justify-start items-center rounded-xl py-10 px-4">
                 {[

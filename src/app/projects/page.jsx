@@ -51,7 +51,11 @@ const Page = (context) => {
                     >
                       <div className="w-[30%] h-[20vh] relative">
                         <Image
-                          src={item.image || "/static/images/homePage4.png"}
+                          src={
+                            item.images
+                              ? item.images[0].url
+                              : "/static/images/homePage4.png"
+                          }
                           fill={true}
                           alt="images"
                           className="object-cover rounded-xl border-2 border-gray-500"
