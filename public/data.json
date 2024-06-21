@@ -1,0 +1,30 @@
+{
+  "images": [
+    { "title": "HomePage Image 1", "Url": "/static/images/homePage1.png" },
+    { "title": "HomePage Image 2", "Url": "/static/images/homePage2.png" },
+    { "title": "HomePage Image 3", "Url": "/static/images/homePage3.png" },
+    { "title": "HomePage Image 4", "Url": "/static/images/homePage4.png" },
+    { "title": "HomePage Image 5", "Url": "/static/images/homePage5.png" }
+  ],
+  "avatarImages": [
+    {
+      "title": "avatarImage Image 1",
+      "Url": "/static/images/avatarImage1.png"
+    },
+    {
+      "title": "avatarImage Image 2",
+      "Url": "/static/images/avatarImage2.png"
+    },
+    {
+      "title": "avatarImage Image 3",
+      "Url": "/static/images/avatarImage3.png"
+    },
+    { "title": "avatarImage Image 4", "Url": "/static/images/avatarImage4.png" }
+  ],
+  "comments": [
+    "This platform helped me find my dream home!",
+    "Great service and friendly staff.",
+    "I highly recommend this to anyone looking for a new home.",
+    "Amazing experience from start to finish!"
+  ]
+}

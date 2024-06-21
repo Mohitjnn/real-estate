@@ -1,14 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const comments = [
-  "This platform helped me find my dream home!",
-  "Great service and friendly staff.",
-  "I highly recommend this to anyone looking for a new home.",
-  "Amazing experience from start to finish!",
-];
-
-export default function TextCarousel() {
+export default function TextCarousel({ comments = [] }) {
   const [currentComment, setCurrentComment] = useState(0);
   const [animate, setAnimate] = useState(false);
 
