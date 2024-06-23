@@ -26,7 +26,7 @@ const AutoScrollingImages = ({ images = [] }) => {
 
   useEffect(() => {
     if (emblaApi) {
-      console.log(emblaApi.slideNodes()); // Access API
+      emblaApi.slideNodes(); // Access API
     }
   }, [emblaApi]);
 

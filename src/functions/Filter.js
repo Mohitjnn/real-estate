@@ -16,7 +16,7 @@ export const useFilteredData = (initialFilters) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        console.log("Fetching data with filters:", filters); // Debugging statement
+        "Fetching data with filters:", filters; // Debugging statement
         const result = await getData(filters);
         setData(result);
       } catch (error) {

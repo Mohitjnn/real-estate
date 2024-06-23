@@ -18,7 +18,7 @@ export async function POST(req) {
       };
 
       const filteredProperties = await properties.find(query).exec();
-      console.log(filteredProperties);
+      filteredProperties;
       return NextResponse.json(filteredProperties);
     }
 
@@ -88,7 +88,7 @@ export async function POST(req) {
         ])
         .exec();
 
-      console.log(similarProperties);
+      similarProperties;
       return NextResponse.json(similarProperties);
     }
   } catch (error) {

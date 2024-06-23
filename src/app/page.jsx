@@ -38,6 +38,7 @@ export default async function Home() {
           </div>
         </section>
         <section className="relative w-full h-fit flex flex-col mt-32 mb-20 px-6 lg:px-8 lg:space-y-8">
+          <h1 className="Title text-bluePrimary">Worked With</h1>
           <AutoScrollingImages images={images} />
           <p className="w-fit text-m lg:text-2xl font-extralight text-justify lg:mx-8 py-10 border-b-2 border-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In ducimus,
