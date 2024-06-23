@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 export const useFilteredData = (initialFilters) => {
   const [data, setData] = useState([]);
   const [filters, setFilters] = useState(initialFilters);
+  const [error, setError] = useState("");
 
   const handleFilterChange = (key, value) => {
     setFilters((prevFilters) => ({
@@ -19,7 +20,13 @@ export const useFilteredData = (initialFilters) => {
         const result = await getData(filters);
         setData(result);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        // Extract meaningful error message
+        const errorMessage = JSON.stringify(
+          error,
+          Object.getOwnPropertyNames(error)
+        );
+        console.error("Error fetching data:", errorMessage); // Log the full error
+        setError(errorMessage);
       }
     };
     fetchData();
@@ -35,5 +42,6 @@ export const useFilteredData = (initialFilters) => {
     setFilters,
     handleFilterChange,
     filteredData,
+    error,
   };
 };

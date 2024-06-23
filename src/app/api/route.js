@@ -18,6 +18,7 @@ export async function POST(req) {
       };
 
       const filteredProperties = await properties.find(query).exec();
+      console.log(filteredProperties);
       return NextResponse.json(filteredProperties);
     }
 

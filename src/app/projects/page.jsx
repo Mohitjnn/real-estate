@@ -18,13 +18,16 @@ const Page = (context) => {
     type: "multifetch",
   };
 
-  const { filters, setFilters, handleFilterChange, filteredData } =
+  const { filters, setFilters, handleFilterChange, filteredData, error } =
     useFilteredData(initialFilters);
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
+    console.log("Filtered Data:", filteredData); // Debug: Check filtered data
     if (filteredData.length > 0) {
       setDataLoaded(true);
+    } else {
+      setDataLoaded(false);
     }
   }, [filteredData]);
 
@@ -39,7 +42,7 @@ const Page = (context) => {
               setFilters={setFilters}
               handleFilterChange={handleFilterChange}
             />
-            {dataLoaded && (
+            {dataLoaded ? (
               <>
                 <div className="flex flex-col items-center justify-center h-fit space-y-6 p-8 w-full bg-cardHolderLight rounded-b-3xl">
                   <h1 className="subHeading text-left w-full">Best Options</h1>
@@ -142,6 +145,8 @@ const Page = (context) => {
                   </div>
                 )}
               </>
+            ) : (
+              <p className="text-white mt-4">{error}</p>
             )}
           </div>
         </section>
