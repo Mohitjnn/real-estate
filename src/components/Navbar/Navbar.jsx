@@ -22,14 +22,19 @@ function Navbar() {
     setActiveLink(pathname);
   }, [pathname]);
 
+  const getNavbarClasses = () => {
+    if (pathname === "/") {
+      return "bg-black/20 backdrop-blur-sm fixed";
+    } else if (pathname === "/projects") {
+      return "bg-bluePrimary fixed xl:rounded-b-[5vh]";
+    } else {
+      return "bg-bluePrimary sticky xl:rounded-b-[5vh]";
+    }
+  };
+
   return (
     <div
-      className={` w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 lg:px-8 xl:px-14 xl:py-4 z-30 h-fit   top-0 text-white ${
-        pathname === "/" || pathname === "/projects"
-          ? "bg-black/20 backdrop-blur-md fixed "
-          : "bg-bluePrimary rounded-b-[6vh] sticky"
-      } 
-      `}
+      className={`w-full flex flex-col xl:flex-row justify-between items-between xl:items-center px-4 py-2 lg:px-8 xl:px-14 xl:py-4 z-30 h-fit top-0 text-white ${getNavbarClasses()}`}
     >
       <div className="flex xl:justify-evenly items-center w-fit xl:w-fit h-fit py-2">
         <Link
@@ -55,7 +60,7 @@ function Navbar() {
         ))}
       </div>
       <button
-        className="xl:hidden absolute right-0 m-6"
+        className="xl:hidden absolute right-0 mx-4"
         onClick={() => setOpen((prev) => !prev)}
       >
         {Open ? (

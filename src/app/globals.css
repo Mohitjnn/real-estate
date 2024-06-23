@@ -54,7 +54,7 @@
   /* nav responsive */
 
   .MobileLinks {
-    @apply absolute top-6 left-0 w-full h-fit mt-14 bg-black/20 backdrop-blur-lg text-white flex flex-wrap justify-evenly items-center z-50 rounded-b-3xl p-4
+    @apply absolute top-4 left-0 w-full h-fit mt-8 bg-bluePrimary backdrop-blur-lg text-white flex flex-wrap justify-evenly items-center z-50 rounded-b-3xl p-4
   }
 
   .embla__dot {

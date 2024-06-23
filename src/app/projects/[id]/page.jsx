@@ -149,10 +149,10 @@ const Plotdetails = async ({ params }) => {
             </p>
           ))}
         </section>
-        <section className="flex flex-col md:flex-row items-center justify-start h-fit md:space-x-6 py-6 w-[95%] rounded-b-3xl">
-          {similarProperties.slice(0, 3).map((item, i) => (
+        <section className="flex flex-col md:flex-row items-center justify-start h-fit space-y-4 md:space-y-0 md:space-x-6 py-6 w-[95%] rounded-b-3xl">
+          {similarProperties.map((item, i) => (
             <Link
-              className="flex flex-col h-fit items-center w-full md:w-1/2 lg:w-1/3 rounded-xl bg-cardHolderLight"
+              className="flex flex-col h-[60vh] items-center w-full md:w-1/2 lg:w-1/3 rounded-xl bg-cardHolderLight"
               href={`/projects/${item.Name}`}
               key={i}
             >

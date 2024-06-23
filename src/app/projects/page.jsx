@@ -23,7 +23,7 @@ const Page = (context) => {
   return (
     <main>
       <center className="w-full h-fit">
-        <section className="relative w-full h-[50vh] flex flex-col justify-start text-left bg-bluePrimary rounded-b-[8vh] p-4 lg:p-8">
+        <section className="absolute top-0 w-full h-[50vh] flex flex-col justify-start text-left bg-bluePrimary rounded-b-[8vh] p-4 lg:p-8">
           <div className="flex flex-col py-16 lg:px-4 w-full h-full">
             <h1 className="Heading text-white my-4">Search In</h1>
             <ProjectSearchFilter
