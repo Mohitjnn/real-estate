@@ -15,7 +15,7 @@ const Modal = ({
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black/80 dismiss z-30"
+      className="fixed -top-5 inset-0 flex items-center justify-center bg-black/80 dismiss z-30"
       onClick={handleClick}
     >
       <Image

@@ -65,7 +65,7 @@ const ImageGallery = ({ images }) => {
   };
 
   return (
-    <div className="w-[50%] h-full flex flex-col space-y-2">
+    <div className="w-full lg:w-[50%] h-full flex flex-col space-y-2">
       <div className="w-full h-[45vh] relative cursor-pointer">
         <Image
           src={data[0].url}
