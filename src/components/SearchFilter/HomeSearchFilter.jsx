@@ -39,7 +39,7 @@ const HomeSearchFilter = () => {
 
   return (
     <>
-      <div className="w-[40%] lg:w-[20%] h-[10vh] z-20 flex justify-evenly items-center">
+      <div className="w-[40%] lg:w-[20%] md:h-[8vh] lg:h-[10vh] z-20 flex justify-evenly items-center">
         <button
           className={`text content-center font-bold my-4 w-1/2 h-full ${
             !searchParams.buyOrRent ? "bg-bluePrimary text-white" : "bg-white"
@@ -58,7 +58,7 @@ const HomeSearchFilter = () => {
         </button>
       </div>
       <div
-        className="w-[90%] lg:w-[60%] bg-white xl:h-[15vh] flex flex-col space-y-4 lg:space-y-0 lg:flex-row justify-between items-center rounded-xl lg:rounded-[20vh] p-4"
+        className="w-[90%] md:w-[70%] lg:-w-[60%] bg-white xl:h-[15vh] flex flex-col space-y-4 lg:space-y-0 lg:flex-row justify-between items-center rounded-xl lg:rounded-[20vh] p-4"
         style={{ boxShadow: "0px 2px 10px 0px" }}
       >
         <div className="flex flex-row">
@@ -125,7 +125,7 @@ const HomeSearchFilter = () => {
             pathname: "/projects",
             query: constructQuery(),
           }}
-          className="BtnPrimary text-white py-4"
+          className="BtnPrimary md:w-1/2 lg:w-[20%] text-white py-4"
         >
           Search
         </Link>

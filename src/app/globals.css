@@ -22,7 +22,7 @@
 
   /* fonts */
   .Title {
-    @apply lg:text-8xl md:text-6xl text-4xl font-black;
+    @apply lg:text-8xl md:text-6xl text-5xl font-black;
   }
 
   .Heading {
@@ -41,7 +41,7 @@
   /* btn */
 
   .BtnPrimary {
-    @apply text-white bg-bluePrimary rounded-[30px] w-full md:w-fit px-[7%] py-2 md:py-3 h-fit;
+    @apply text-white bg-bluePrimary rounded-[30px] w-full lg:w-fit px-[7%] py-2 md:py-3 h-fit;
   }
 
   /* form */

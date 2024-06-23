@@ -24,10 +24,10 @@ const DataCarousel = ({ Reasons = [] }) => {
         <div className="flex">
           {Reasons.map((Reason, index) => (
             <div
-              className="flex-none h-fit w-[65vh] mx-6  rounded-xl  lg:mx-20 m-4 min-w-0 "
+              className="flex-none h-fit w-[90vw] lg:w-[65vh] mx-6  rounded-xl  lg:mx-20 m-4 min-w-0 "
               key={index}
             >
-              <div className="w-[65vh] h-[30vh] relative ">
+              <div className="w-full h-[30vh] relative ">
                 <Image
                   src={`${Reason.Url}`}
                   fill={true}
