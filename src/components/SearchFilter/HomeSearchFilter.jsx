@@ -39,7 +39,7 @@ const HomeSearchFilter = () => {
 
   return (
     <>
-      <div className="w-[40%] lg:w-[20%] md:h-[8vh] lg:h-[10vh] z-20 flex justify-evenly items-center">
+      <div className="w-[40%] lg:w-[20%] h-[8vh] lg:h-[10vh] z-20 flex justify-evenly items-center">
         <button
           className={`text content-center font-bold my-4 w-1/2 h-full ${
             !searchParams.buyOrRent ? "bg-bluePrimary text-white" : "bg-white"
