@@ -24,7 +24,7 @@ function Navbar() {
 
   const getNavbarClasses = () => {
     if (pathname === "/") {
-      return "bg-black/20 backdrop-blur-sm fixed";
+      return "bg-transparent absolute";
     } else if (pathname === "/projects") {
       return "bg-bluePrimary fixed xl:rounded-b-[5vh]";
     } else {
