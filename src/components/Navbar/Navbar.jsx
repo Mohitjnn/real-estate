@@ -23,7 +23,7 @@ function Navbar() {
   }, [pathname]);
 
   const getNavbarClasses = () => {
-    if (pathname === "/") {
+    if (pathname === "/" || pathname === "/about") {
       return "bg-transparent absolute";
     } else if (pathname === "/projects") {
       return "bg-bluePrimary fixed xl:rounded-b-[5vh]";

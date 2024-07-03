@@ -19,7 +19,11 @@ const ImageCarousel = ({ images = [] }) => {
   }, [images]);
 
   return (
-    <div className={`relative w-full h-[100vh] xl:h-[97vh] overflow-hidden`}>
+    <div
+      className={`relative w-full ${
+        pathname === "/" ? "h-[100vh] xl:h-[97vh]" : "h-[70vh]"
+      } overflow-hidden`}
+    >
       {/* Background element */}
       <div className={`absolute inset-0 bg-black/40 z-0`} />
       {images.map((image, index) => (
