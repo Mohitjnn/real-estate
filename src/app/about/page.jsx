@@ -13,12 +13,12 @@ export default async function AboutUsPage() {
     return <div className="Title w-full text-center py-4">Loading...</div>;
   }
 
-  const { images, avatarImages, comments = [] } = data;
+  const { images } = data;
 
   return (
     <main>
       <center className="w-full h-fit">
-        <section className="relative w-full h-[70vh] flex items-center">
+        <section className="relative w-full h-[50vh] lg:h-[70vh] flex items-center">
           <div className="absolute w-full h-full">
             <ImageCarousel images={images} />
           </div>
@@ -34,15 +34,15 @@ export default async function AboutUsPage() {
             </p>
           </div>
         </section>
-        <section className="w-full flex flex-col justify-center py-20">
-          <h1 className="Heading w-full flex flex-col text-center">
+        <section className="w-full flex flex-col justify-center py-12 lg:py-20">
+          <h1 className="subHeading lg:Heading w-full flex flex-col text-center">
             <span className="Title font-extrabold text-bluePrimary">
               Trust Us
             </span>
             To Find you the Perfect Home
           </h1>
-          <div className="flex px-16 py-6 w-full h-full space-x-8 items-center justify-between">
-            <div className="relative w-[50%] h-[75vh]">
+          <div className="flex flex-col lg:flex-row px-4 lg:px-16 py-6 w-full h-full space-y-6 lg:space-y-0 lg:space-x-8 items-center justify-between">
+            <div className="relative w-full lg:w-[50%] h-[50vh] lg:h-[75vh]">
               <Image
                 className="rounded-xl"
                 src={images[0].Url}
@@ -50,8 +50,8 @@ export default async function AboutUsPage() {
                 alt="Image 0"
               />
             </div>
-            <div className="flex flex-col h-full w-[50%] px-4 space-y-8">
-              <div className="h-[35vh] w-full relative">
+            <div className="flex flex-row lg:flex-col h-full w-full lg:w-[50%] space-x-4 lg:space-x-0 lg:px-4 lg:space-y-8">
+              <div className="h-[30vh] lg:h-[35vh] w-full relative">
                 <Image
                   className="object-cover rounded-xl"
                   fill={true}
@@ -59,7 +59,7 @@ export default async function AboutUsPage() {
                   alt="Image 1"
                 />
               </div>
-              <div className="h-[35vh] w-full relative">
+              <div className="h-[30vh] lg:h-[35vh] w-full relative">
                 <Image
                   className="object-cover rounded-xl"
                   fill={true}
@@ -69,17 +69,19 @@ export default async function AboutUsPage() {
               </div>
             </div>
           </div>
-          <div className="Heading w-full text-center mb-[15vh]">
+          <div className="Heading w-full text-center">
             Where You
-            <span className="text-blue-950 px-4">ALWAYS</span>
+            <span className="text-blue-950 px-2 lg:px-4 text-center">
+              ALWAYS
+            </span>
             Come First
           </div>
         </section>
-        <section className="flex w-full justify-between items-center py-4">
+        <section className="flex flex-col-reverse lg:flex-row w-full justify-between items-center py-4">
           <DiamondGrid />
-          <div className="w-full text-left flex flex-col px-16 space-y-4">
+          <div className="w-full text-justify lg:text-left flex flex-col pb-52 lg:pb-0 lg:pt-0 px-4 lg:px-16 space-y-4">
             <h1 className="Title text-bluePrimary ">The Founders</h1>
-            <p className="text-gray-700 text w-fit ml-24">
+            <p className="text-gray-700 text w-fit lg:ml-24">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown.Lorem Ipsum is simply dummy

@@ -21,7 +21,7 @@ const ImageCarousel = ({ images = [] }) => {
   return (
     <div
       className={`relative w-full ${
-        pathname === "/" ? "h-[100vh] xl:h-[97vh]" : "h-[70vh]"
+        pathname === "/" ? "h-[100vh] xl:h-[97vh]" : "h-[50vh] lg:h-[70vh]"
       } overflow-hidden`}
     >
       {/* Background element */}

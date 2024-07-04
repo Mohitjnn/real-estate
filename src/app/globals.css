@@ -54,7 +54,7 @@
   /* nav responsive */
 
   .MobileLinks {
-    @apply absolute top-4 left-0 w-full h-fit mt-8 bg-bluePrimary backdrop-blur-lg text-white flex flex-wrap justify-evenly items-center z-50 rounded-b-3xl p-4
+    @apply absolute top-4 left-0 w-full h-fit mt-8 text-white flex flex-wrap justify-evenly items-center z-50 rounded-b-3xl p-4
   }
 
   .embla__dot {
@@ -64,7 +64,7 @@
   }
 
   .diamond {
-    @apply list-none absolute bg-black rotate-45 -translate-y-1/3 -mx-12 overflow-hidden rounded-xl
+    @apply list-none absolute bg-black rotate-45 -translate-y-1/3 -mx-12 overflow-hidden rounded-lg lg:rounded-xl
   }
 
 }

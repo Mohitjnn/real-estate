@@ -97,7 +97,13 @@ function Navbar() {
           </svg>
         )}
       </button>
-      <div className={`xl:hidden MobileLinks  ${Open ? "" : "hidden"} `}>
+      <div
+        className={`xl:hidden MobileLinks  ${Open ? "" : "hidden"} ${
+          pathname == "/" || pathname == "/about"
+            ? "bg-black/30 backdrop-blur-3xl"
+            : "bg-bluePrimary"
+        } `}
+      >
         {Links.map((link) => (
           <Link
             href={link.url}
