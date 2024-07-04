@@ -15,10 +15,10 @@ export async function POST(req) {
         IsForRent: isForRent,
         AskingPrice: { $gte: minPrice, $lt: maxPrice },
         "Features.Bedrooms": bedrooms,
+        upcoming: false,
       };
 
       const filteredProperties = await properties.find(query).exec();
-      filteredProperties;
       return NextResponse.json(filteredProperties);
     }
 

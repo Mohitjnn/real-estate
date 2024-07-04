@@ -18,7 +18,7 @@ const ProjectSearchFilter = ({ filters, handleFilterChange }) => {
           )
         )}
       </select>
-      <div className="flex flex-col-reverse lg:flex-row space-y-4 lg:space-y-0 items-center justify-between p-8 w-full h-fit  bg-cardHolderLight rounded-t-3xl">
+      <div className="flex flex-col-reverse lg:flex-row space-y-4 lg:space-y-0 items-center justify-between p-8 lg:px-20 w-full h-fit  bg-cardHolderLight rounded-t-3xl">
         <select
           name="isForRent"
           className="text font-semibold rounded-lg my-3 px-3 outline-none w-full lg:w-fit h-full"

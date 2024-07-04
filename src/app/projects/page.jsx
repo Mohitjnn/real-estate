@@ -3,13 +3,14 @@ import ProjectSearchFilter from "@/components/SearchFilter/ProjectSearchFilter";
 import Image from "next/image";
 import Link from "next/link";
 import { useFilteredData } from "@/functions/Filter";
+import ProjectCard from "@/components/cards/ProjectCard";
 
 const Page = (context) => {
   const { location, bedrooms, minPrice, maxPrice, isForRent } =
     context.searchParams;
 
   const initialFilters = {
-    location: location || "Andheri",
+    location: location || "Malad",
     bedrooms: bedrooms ? parseInt(bedrooms) : 1,
     minPrice: minPrice ? parseInt(minPrice) : 0,
     maxPrice: maxPrice ? parseInt(maxPrice) : 99999999,
@@ -33,38 +34,12 @@ const Page = (context) => {
             />
             {filteredData ? (
               <>
-                <div className="flex flex-col items-center justify-center h-fit space-y-6 p-8 w-full bg-cardHolderLight rounded-b-3xl">
-                  <h1 className="Heading text-center lg:text-left w-full">
+                <div className="flex flex-col items-center justify-center h-fit space-y-6 pb-16 px-4 lg:px-16 w-full bg-cardHolderLight rounded-b-3xl">
+                  <h1 className="Title lg:subHeading text-center lg:text-left w-full">
                     Best Options
                   </h1>
                   {filteredData.slice(0, 3).map((item, i) => (
-                    <Link
-                      href={`/projects/${item.Name}`}
-                      className="flex lg:flex-row flex-col h-fit justify-between items-center w-full rounded-xl bg-white p-6"
-                      key={i}
-                    >
-                      <div className="w-full lg:w-[30%] h-[20vh] relative">
-                        <Image
-                          src={
-                            item.images
-                              ? item.images[0].url
-                              : "/static/images/homePage4.png"
-                          }
-                          fill={true}
-                          alt="images"
-                          className="object-cover rounded-xl border-2 border-gray-500"
-                        />
-                      </div>
-                      <div className="text-content">
-                        <h2 className="text-xl text-center w-full font-bold mt-4">
-                          {item.Name}
-                        </h2>
-                        <p className="text-m text-center">
-                          {item.SpecialFeatures?.join(", ")}
-                        </p>
-                        <p className="text-m text-center">{item.AskingPrice}</p>
-                      </div>
-                    </Link>
+                    <ProjectCard item={item} key={i} />
                   ))}
                 </div>
                 <div className="relative w-full py-4">
@@ -110,28 +85,7 @@ const Page = (context) => {
                 {filteredData.length > 3 && (
                   <div className="flex flex-col items-center justify-center h-fit space-y-6 p-8 w-full bg-cardHolderLight rounded-3xl">
                     {filteredData.slice(3).map((item, i) => (
-                      <Link
-                        href={`/projects/${item.Name}`}
-                        className="flex h-fit items-center w-full rounded-xl bg-white p-6"
-                        key={i}
-                      >
-                        <div className="w-[60%] h-[20vh] relative">
-                          <Image
-                            src={item.image || "/static/images/homePage4.png"}
-                            fill={true}
-                            alt="images"
-                            className="object-cover rounded-xl border-2 border-gray-500"
-                          />
-                        </div>
-                        <div className="text-content">
-                          <h2 className="text-xl text-center w-full font-bold mt-4">
-                            {item.Name}
-                          </h2>
-                          <p className="text-m text-center">
-                            {item.SpecialFeatures?.join(", ")}
-                          </p>
-                        </div>
-                      </Link>
+                      <ProjectCard item={item} key={i} />
                     ))}
                   </div>
                 )}
