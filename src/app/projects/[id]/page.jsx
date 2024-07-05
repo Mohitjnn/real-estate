@@ -2,8 +2,8 @@ import getData from "@/fetchHook/datafetch";
 import React from "react";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import Link from "next/link";
-import Image from "next/image";
 import ShowMoreShowLess from "@/components/cards/PersonalStats";
+import ProjectCard2 from "@/components/cards/ProjectCard2";
 
 const Plotdetails = async ({ params }) => {
   const Name = decodeURIComponent(params.id);
@@ -85,7 +85,7 @@ const Plotdetails = async ({ params }) => {
   return (
     <main>
       <center className="w-full h-fit">
-        <section className="flex flex-col items-center lg:items-start mt-6 justify-start h-fit space-y-6 p-4 md:p-8 w-[95%] bg-cardHolderLight rounded-3xl">
+        <section className="flex flex-col items-center lg:items-start mt-6 justify-start h-fit space-y-6 p-4 md:p-8 w-[93%] bg-cardHolderLight rounded-3xl">
           <div className="flex flex-col text-left w-full">
             <h1 className="text-4xl font-medium">
               {formatter.format(AskingPrice)}
@@ -125,11 +125,11 @@ const Plotdetails = async ({ params }) => {
             Contact Owner
           </Link>
         </section>
-        <section className="flex flex-col text-left items-start mt-6 justify-center h-fit space-y-6 p-8 w-[95%] bg-cardHolderLight rounded-3xl">
+        <section className="flex flex-col text-left items-start mt-6 justify-center h-fit space-y-6 p-8 w-[93%] bg-cardHolderLight rounded-3xl">
           <h1 className="w-full subHeading font-medium">More Details</h1>
           <ShowMoreShowLess items={data} />
         </section>
-        <section className="flex flex-col mt-6 justify-center h-fit space-y-6 p-8 w-[95%] bg-cardHolderLight rounded-3xl">
+        <section className="flex flex-col mt-6 justify-center h-fit space-y-6 p-8 w-[93%] bg-cardHolderLight rounded-3xl">
           <h1 className="w-full subHeading font-medium text-left">Amenities</h1>
           <div className="flex flex-col space-y-4">
             {Amenities.map((Amenity, index) => (
@@ -139,7 +139,7 @@ const Plotdetails = async ({ params }) => {
             ))}
           </div>
         </section>
-        <section className="flex flex-col  items-start mt-6 justify-center h-fit space-y-6 p-8 w-[95%] bg-cardHolderLight rounded-3xl">
+        <section className="flex flex-col  items-start mt-6 justify-center h-fit space-y-6 p-8 w-[93%] bg-cardHolderLight rounded-3xl">
           <h1 className="w-full subHeading font-medium text-left">
             Special Features
           </h1>
@@ -149,30 +149,9 @@ const Plotdetails = async ({ params }) => {
             </p>
           ))}
         </section>
-        <section className="flex flex-col md:flex-row items-center justify-start h-fit space-y-4 md:space-y-0 md:space-x-6 py-6 w-[95%] rounded-b-3xl">
+        <section className="flex flex-col md:flex-row items-center justify-start h-fit space-y-4 md:space-y-0 md:space-x-20 py-6 w-[93%] rounded-b-3xl">
           {similarProperties.map((item, i) => (
-            <Link
-              className="flex flex-col h-[60vh] items-center w-full md:w-1/2 lg:w-1/3 rounded-xl bg-cardHolderLight"
-              href={`/projects/${item.Name}`}
-              key={i}
-            >
-              <div className="w-full h-[40vh] relative">
-                <Image
-                  src="/static/images/homePage4.png"
-                  fill={true}
-                  alt="images"
-                  className="object-cover rounded-xl"
-                />
-              </div>
-              <div className="p-4">
-                <h1 className="text-xl text-center w-full font-bold mt-4">
-                  {formatter.format(item.AskingPrice)}
-                </h1>
-                <h1 className="text-lg text-center text-gray-500 w-full font-semibold mt-4">
-                  {item.Landmarks.join(", ")}
-                </h1>
-              </div>
-            </Link>
+            <ProjectCard2 item={item} key={i} />
           ))}
         </section>
       </center>

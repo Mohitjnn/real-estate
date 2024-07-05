@@ -1,13 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const Links = [
   { name: "Home", url: "/" },
   { name: "About Us", url: "/about" },
-  { name: "New Projects", url: "/upcomingprojects" },
   { name: "Plots", url: "/projects" },
   { name: "Achievements", url: "/achievements" },
   { name: "Contact Us", url: "/contact" },
