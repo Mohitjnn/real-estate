@@ -24,12 +24,15 @@ export default function Form() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    phoneNumber: "",
     email: "",
-    country: "",
-    state: "",
-    city: "",
-    street: "",
-    zip: "",
+    propertyType: "",
+    location: "",
+    expectedPrice: "",
+    carpetArea: "",
+    bedRooms: "",
+    bathRooms: "",
+    rentSell: "",
   });
 
   const handleInputChange = (e) => {
