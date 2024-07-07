@@ -1,6 +1,7 @@
 "use client";
-
 import { useState } from "react";
+import { basicSchema } from "@/schemas";
+import { useFormik } from "formik";
 import PersonalInformation from "@/components/FormSteps/PersonalInformation";
 import Address from "@/components/FormSteps/Address";
 import Complete from "@/components/FormSteps/Complete";
@@ -20,25 +21,48 @@ const steps = [
 ];
 
 export default function Form() {
+  const [successMessage, setSuccessMessage] = useState("");
   const [currentStep, setCurrentStep] = useState(0);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    email: "",
-    propertyType: "",
-    location: "",
-    expectedPrice: "",
-    carpetArea: "",
-    bedRooms: "",
-    bathRooms: "",
-    rentSell: "",
+
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      email: "",
+      propertyType: "",
+      location: "",
+      expectedPrice: "",
+      carpetArea: "",
+      bedRooms: "",
+      bathRooms: "",
+      rentSell: "",
+    },
+    validationSchema: basicSchema,
+    onSubmit: (values, { resetForm }) => {
+      const formData = new FormData();
+      formData.append("firstName", values.firstName);
+      formData.append("lastName", values.lastName);
+      formData.append("phoneNumber", values.phoneNumber);
+      formData.append("email", values.email);
+      formData.append("propertyType", values.propertyType);
+      formData.append("location", values.location);
+      formData.append("expectedPrice", values.expectedPrice);
+      formData.append("carpetArea", values.carpetArea);
+      formData.append("bedRooms", values.bedRooms);
+      formData.append("bathRooms", values.bathRooms);
+      formData.append("rentSell", values.rentSell);
+
+      console.log(Object.fromEntries(formData.entries()));
+      setTimeout(() => {
+        resetForm();
+        setSuccessMessage("Form submitted successfully!");
+      }, 3000);
+    },
   });
 
-  const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
-  };
+  const { values, handleBlur, touched, handleChange, errors, handleSubmit } =
+    formik;
 
   const next = () =>
     setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1));
@@ -56,7 +80,10 @@ export default function Form() {
           <form
             className="bg-white py-8 w-full rounded-xl"
             style={{ boxShadow: "0px 0px 11px 0px lightgray" }}
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}
           >
             <nav aria-label="Progress">
               <ol
@@ -69,6 +96,7 @@ export default function Form() {
                 <div className="flex space-x-4">
                   {steps.map((step, stepIdx) => (
                     <li
+                      key={stepIdx}
                       className={`block h-[0.5vh] w-[7vh] ${
                         stepIdx === currentStep
                           ? "bg-sky-600"
@@ -82,8 +110,11 @@ export default function Form() {
 
             <div className="mt-10">
               <StepComponent
-                formData={formData}
-                handleInputChange={handleInputChange}
+                formData={values}
+                handleInputChange={handleChange}
+                handleBlur={handleBlur}
+                errors={errors}
+                touched={touched}
               />
             </div>
           </form>
@@ -101,7 +132,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={next}
-                className="rounded-md bg-sky-900 px-12 py-2 text-sm text-white shadow-sm hover:bg-sky-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-60"
+                className="rounded-md bg-sky-900 px-12 py-2 text-sm text-white shadow-sm hover:bg-sky-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
               >
                 Next
               </button>
@@ -110,9 +141,16 @@ export default function Form() {
               <button
                 type="submit"
                 className="rounded-md bg-sky-900 px-12 py-2 text-sm text-white shadow-sm hover:bg-sky-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+                onClick={() => {
+                  console.log("Submit button clicked"); // Debugging line
+                  handleSubmit();
+                }}
               >
                 Submit
               </button>
+            )}
+            {currentStep === steps.length - 1 && successMessage && (
+              <p className="text-green-500">{successMessage}</p>
             )}
           </div>
         </section>

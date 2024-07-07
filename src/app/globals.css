@@ -47,7 +47,7 @@
   /* form */
 
   .input {
-    @apply border-2 border-gray-500 rounded-lg h-fit p-3 outline-none w-[100%]
+    @apply border-2 border-gray-200 rounded-lg h-fit px-3 py-1 outline-none w-[100%]
   }
 
 

@@ -1,31 +1,39 @@
 import * as yup from "yup";
 
-const experienceOptions = ["1 year or less", "2 years", "3 years", "4+ years"];
+const propertyTypeOptions = [
+  "Villa",
+  "Flat",
+  "Studio",
+  "Residential",
+  "Business",
+];
 
-export const basicSchema1 = yup.object().shape({
-  name: yup.string().required("Required"),
-  email: yup.string().email("Invalid email").required("Required"),
-  Phonenumber: yup
+const rentOrSell = ["Rent", "Sell"];
+
+export const basicSchema = yup.object().shape({
+  firstName: yup.string().required("Required"),
+  lastName: yup.string().required("Required"),
+  phoneNumber: yup
     .string()
     .matches(/^[0-9]+$/, "Must be only digits")
     .min(10, "Must be exactly 10 digits")
     .max(10, "Must be exactly 10 digits")
     .required("Required"),
-  desc: yup.string().required("Required"),
-});
-
-export const basicSchema2 = yup.object().shape({
-  name: yup.string().required("Required"),
   email: yup.string().email("Invalid email").required("Required"),
-  Phonenumber: yup
+  propertyType: yup
     .string()
-    .matches(/^[0-9]+$/, "Must be only digits")
-    .min(10, "Must be exactly 10 digits")
-    .max(10, "Must be exactly 10 digits")
+    .oneOf(propertyTypeOptions, "Please Choose One")
     .required("Required"),
-  Experience: yup
+  rentSell: yup
     .string()
-    .oneOf(experienceOptions, "Invalid Experience")
+    .oneOf(rentOrSell, "Please Choose One")
     .required("Required"),
-  desc: yup.string().required("Required"),
+  location: yup.string().required("Required"),
+  expectedPrice: yup
+    .number()
+    .typeError("Must be a number")
+    .required("Required"),
+  carpetArea: yup.number().typeError("Must be a number").required("Required"),
+  bedRooms: yup.number().typeError("Must be a number").required("Required"),
+  bathRooms: yup.number().typeError("Must be a number").required("Required"),
 });
