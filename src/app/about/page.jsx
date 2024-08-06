@@ -83,13 +83,14 @@ export default async function AboutUsPage() {
             <h1 className="Title text-bluePrimary ">The Founders</h1>
             <p className="text-gray-700 text w-fit lg:ml-24">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown.Lorem Ipsum is simply dummy
-              text of the printing and typesetting industry. Lorem Ipsum has
-              been the industry's standard dummy text ever since the 1500s, when
-              an unknown.Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy
+              text ever since the 1500s, when an unknown.Lorem Ipsum is simply
+              dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry&apos;s standard dummy text ever since the
+              1500s, when an unknown.Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industry&apos;s standard dummy text ever since the 1500s, when an
+              unknown
             </p>
           </div>
         </section>

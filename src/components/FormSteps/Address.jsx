@@ -29,6 +29,7 @@ const Address = ({
           <select
             type="text"
             id="propertyType"
+            name="propertyType"
             value={formData.propertyType}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -61,6 +62,7 @@ const Address = ({
         <div className="mt-2">
           <select
             id="rentSell"
+            name="rentSell"
             value={formData.rentSell}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -90,6 +92,7 @@ const Address = ({
           <input
             type="text"
             id="location"
+            name="location"
             value={formData.location}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -119,6 +122,7 @@ const Address = ({
           <input
             type="text"
             id="expectedPrice"
+            name="expectedPrice"
             value={formData.expectedPrice}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -146,6 +150,7 @@ const Address = ({
           <input
             type="text"
             id="carpetArea"
+            name="carpetArea"
             value={formData.carpetArea}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -171,6 +176,7 @@ const Address = ({
           <input
             type="text"
             id="bedRooms"
+            name="bedRooms"
             value={formData.bedRooms}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -198,6 +204,7 @@ const Address = ({
           <input
             type="text"
             id="bathRooms"
+            name="bathRooms"
             value={formData.bathRooms}
             onChange={handleInputChange}
             onBlur={handleBlur}

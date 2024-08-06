@@ -14,7 +14,7 @@ export default function TextCarousel({ comments = [] }) {
       }, 1000); // Match this duration with the CSS animation duration
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [comments.length]);
 
   return (
     <p

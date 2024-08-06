@@ -27,6 +27,7 @@ const PersonalInformation = ({
           <input
             type="text"
             id="firstName"
+            name="firstName"
             value={formData.firstName}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -53,6 +54,7 @@ const PersonalInformation = ({
           <input
             type="text"
             id="lastName"
+            name="lastName"
             value={formData.lastName}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -83,6 +85,7 @@ const PersonalInformation = ({
           <input
             type="text"
             id="phoneNumber"
+            name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleInputChange}
             onBlur={handleBlur}
@@ -107,6 +110,7 @@ const PersonalInformation = ({
         <div className="mt-2">
           <input
             id="email"
+            name="email"
             type="email"
             value={formData.email}
             onChange={handleInputChange}

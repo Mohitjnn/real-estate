@@ -6,6 +6,8 @@ import PersonalInformation from "@/components/FormSteps/PersonalInformation";
 import Address from "@/components/FormSteps/Address";
 import Complete from "@/components/FormSteps/Complete";
 
+const formUrl = process.env.NEXT_PUBLIC_FORM_URL;
+
 const steps = [
   {
     id: "Step 1",
@@ -54,10 +56,22 @@ export default function Form() {
       formData.append("rentSell", values.rentSell);
 
       console.log(Object.fromEntries(formData.entries()));
-      setTimeout(() => {
-        resetForm();
-        setSuccessMessage("Form submitted successfully!");
-      }, 3000);
+      fetch(formUrl, {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            setSuccessMessage("Form submitted successfully!");
+            console.log(response);
+            resetForm();
+          } else {
+            setSuccessMessage("Form submission failed. Please try again.");
+          }
+        })
+        .catch(() => {
+          setSuccessMessage("An error occurred. Please try again.");
+        });
     },
   });
 
