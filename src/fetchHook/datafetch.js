@@ -13,8 +13,6 @@ async function getData(propertyData) {
 export default getData;
 
 export async function localData() {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/static/data.json`
-  );
+  const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/data.json`);
   return response.json();
 }
