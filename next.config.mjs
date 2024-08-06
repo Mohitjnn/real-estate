@@ -19,7 +19,10 @@ const nextConfig = {
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           // Here you add your whitelisted origin
-          { key: "Access-Control-Allow-Origin", value: "*" },
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "https://real-estate-29jt.vercel.app/",
+          },
           {
             key: "Access-Control-Allow-Methods",
             value: "GET,DELETE,PATCH,POST,PUT",
