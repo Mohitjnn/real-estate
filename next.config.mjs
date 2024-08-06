@@ -15,7 +15,7 @@ const nextConfig = {
     return [
       {
         // Here you may add your source(s) using a regular expression.
-        source: `${process.env.NEXT_PUBLIC_URL}/api`,
+        source: "/api",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           // Here you add your whitelisted origin
