@@ -1,7 +1,4 @@
-import DataCarousel from "@/components/Carousel/DataCarousel";
-import HomeSearchFilter from "@/components/SearchFilter/HomeSearchFilter";
 import { localData } from "@/fetchHook/datafetch";
-import AutoScrollingImages from "@/components/Carousel/AutoScrollImages";
 import ImageCarousel from "@/components/Carousel/ImageCarousel";
 import Image from "next/image";
 import DiamondGrid from "@/components/ImageGallery/DiamondGrid";
